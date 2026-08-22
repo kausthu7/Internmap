@@ -36,6 +36,7 @@ const LOCAL_STORAGE_CUSTOM_STARTUPS = 'paris_startups_custom_v1';
 const LOCAL_STORAGE_BOOKMARKS = 'paris_startups_bookmarks_v1';
 const LOCAL_STORAGE_DELETED_STARTUPS = 'paris_startups_deleted_v1';
 const LOCAL_STORAGE_BOOSTED_STARTUPS = 'paris_startups_boosted_v1';
+const LOCAL_STORAGE_MODIFIED_STARTUPS = 'paris_startups_modified_v1';
 
 export default function App() {
   const { t } = useLanguage();
@@ -56,11 +57,17 @@ export default function App() {
       const saved = localStorage.getItem(LOCAL_STORAGE_CUSTOM_STARTUPS);
       const savedDeleted = localStorage.getItem(LOCAL_STORAGE_DELETED_STARTUPS);
       const savedBoosted = localStorage.getItem(LOCAL_STORAGE_BOOSTED_STARTUPS);
+      const savedModified = localStorage.getItem(LOCAL_STORAGE_MODIFIED_STARTUPS);
       
       const deletedIds: string[] = savedDeleted ? JSON.parse(savedDeleted) : [];
       const boostedIds: string[] = savedBoosted ? JSON.parse(savedBoosted) : [];
+      const modifiedList: Startup[] = savedModified ? JSON.parse(savedModified) : [];
       
-      let baseList = PARIS_STARTUPS_DATA;
+      let baseList = PARIS_STARTUPS_DATA.map(s => {
+        const mod = modifiedList.find(m => m.id === s.id);
+        return mod ? mod : s;
+      });
+
       if (deletedIds.length > 0) {
         baseList = baseList.filter(s => !deletedIds.includes(s.id));
       }
@@ -68,7 +75,11 @@ export default function App() {
       let combined: Startup[] = [];
       if (saved) {
         const custom: Startup[] = JSON.parse(saved);
-        combined = [...custom, ...baseList];
+        const updatedCustom = custom.map(s => {
+          const mod = modifiedList.find(m => m.id === s.id);
+          return mod ? mod : s;
+        });
+        combined = [...updatedCustom, ...baseList];
       } else {
         combined = [...baseList];
       }
@@ -206,6 +217,28 @@ export default function App() {
     });
   };
 
+  // Handle Editing Startup
+  const handleEditStartup = (updatedStartup: Startup) => {
+    setStartups((prev) => {
+      const updated = prev.map((s) => s.id === updatedStartup.id ? updatedStartup : s);
+      try {
+        if (updatedStartup.isCommunitySubmitted) {
+          const customOnly = updated.filter((s) => s.isCommunitySubmitted);
+          localStorage.setItem(LOCAL_STORAGE_CUSTOM_STARTUPS, JSON.stringify(customOnly));
+        } else {
+          const savedModified = localStorage.getItem(LOCAL_STORAGE_MODIFIED_STARTUPS);
+          let modifiedList: Startup[] = savedModified ? JSON.parse(savedModified) : [];
+          modifiedList = modifiedList.filter((m) => m.id !== updatedStartup.id);
+          modifiedList.push(updatedStartup);
+          localStorage.setItem(LOCAL_STORAGE_MODIFIED_STARTUPS, JSON.stringify(modifiedList));
+        }
+      } catch (e) {
+        console.error('Failed to persist edited startup', e);
+      }
+      return updated;
+    });
+  };
+
   // Toggle Bookmark
   const handleToggleBookmark = (id: string) => {
     setBookmarkedIds((prev) =>
@@ -332,6 +365,7 @@ export default function App() {
         onAddStartup={handleAddStartup}
         onDeleteStartup={handleDeleteStartup}
         onToggleBoost={handleToggleBoost}
+        onEditStartup={handleEditStartup}
       />
     );
   }
