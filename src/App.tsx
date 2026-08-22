@@ -14,6 +14,8 @@ import { RightSidebar } from './components/RightSidebar';
 import { BottomBar } from './components/BottomBar';
 import { AdvertisePage } from './components/AdvertisePage';
 import { useLanguage } from './context/LanguageContext';
+import { RoleSelectionScreen } from './components/RoleSelectionScreen';
+import { StartupPortalPage } from './components/StartupPortalPage';
 import {
   MapPin,
   Search,
@@ -26,7 +28,8 @@ import {
   TrendingUp,
   Bookmark,
   X,
-  Plus
+  Plus,
+  Building2
 } from 'lucide-react';
 
 const LOCAL_STORAGE_CUSTOM_STARTUPS = 'paris_startups_custom_v1';
@@ -36,6 +39,17 @@ const LOCAL_STORAGE_BOOSTED_STARTUPS = 'paris_startups_boosted_v1';
 
 export default function App() {
   const { t } = useLanguage();
+
+  // Role State (Jobseeker, Startup or Null)
+  const [userRole, setUserRole] = useState<'jobseeker' | 'startup' | null>(() => {
+    return localStorage.getItem('user_role') as 'jobseeker' | 'startup' | null;
+  });
+
+  const handleSelectRole = (role: 'jobseeker' | 'startup') => {
+    setUserRole(role);
+    localStorage.setItem('user_role', role);
+  };
+
   // 1. Startups list state (Default + LocalStorage user submitted)
   const [startups, setStartups] = useState<Startup[]>(() => {
     try {
@@ -327,6 +341,20 @@ export default function App() {
     return <AdvertisePage onBack={() => window.location.hash = ''} />;
   }
 
+  // Role selection & routing
+  if (userRole === null) {
+    return <RoleSelectionScreen onSelectRole={handleSelectRole} />;
+  }
+
+  if (userRole === 'startup') {
+    return (
+      <StartupPortalPage
+        onBackToMap={() => handleSelectRole('jobseeker')}
+        onAddStartup={handleAddStartup}
+      />
+    );
+  }
+
   // Retrieve Ads to display
   const activeAds: { imageUrl: string, linkUrl: string }[] = (() => {
     try {
@@ -381,6 +409,7 @@ export default function App() {
               hiringCount={hiringCount}
               onBoostClick={() => window.location.hash = '/advertise'}
               onSubmitClick={() => setIsSubmitModalOpen(true)}
+              onSwitchRole={() => handleSelectRole('startup')}
               isMobile={true}
             />
           </div>
@@ -405,23 +434,19 @@ export default function App() {
             hiringCount={hiringCount}
             onBoostClick={() => window.location.hash = '/advertise'}
             onSubmitClick={() => setIsSubmitModalOpen(true)}
+            onSwitchRole={() => handleSelectRole('startup')}
             isMobile={false}
           />
         </div>
 
         {/* Mobile Action Buttons Bar (visible below header on screens < lg) */}
-        <div className="fixed top-22 left-4 right-4 z-40 flex gap-2 pointer-events-none lg:hidden">
-          <a
-            href="#/advertise"
-            className="flex-1 h-9 rounded-xl bg-orange-500 hover:bg-orange-600 text-white text-[11px] font-bold flex items-center justify-center gap-1 pointer-events-auto shadow-md border border-orange-400/30 cursor-pointer decoration-none"
-          >
-            <span>⚡ Boost Startup</span>
-          </a>
+        <div className="fixed top-22 left-4 right-4 z-40 flex pointer-events-none lg:hidden">
           <button
-            onClick={() => setIsSubmitModalOpen(true)}
-            className="flex-1 h-9 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-[11px] font-bold flex items-center justify-center gap-1 pointer-events-auto shadow-md border border-indigo-500/30 cursor-pointer"
+            onClick={() => handleSelectRole('startup')}
+            className="w-full h-9 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-[11px] font-bold flex items-center justify-center gap-1.5 pointer-events-auto shadow-md border border-indigo-500/30 cursor-pointer"
           >
-            <span>+ Submit Startup</span>
+            <Building2 className="w-3.5 h-3.5" />
+            <span>List & Boost Your Startup</span>
           </button>
         </div>
 

@@ -7,7 +7,8 @@ import {
   X,
   Globe,
   Sparkles,
-  Plus
+  Plus,
+  Building2
 } from 'lucide-react';
 import { FilterState } from '../types';
 import { PARIS_AREAS, STARTUP_SECTORS, STARTUP_STAGES, STARTUP_TYPES } from '../data/startups';
@@ -30,6 +31,7 @@ interface FloatingHeaderProps {
   hiringCount: number;
   onBoostClick: () => void;
   onSubmitClick: () => void;
+  onSwitchRole: () => void;
   isMobile: boolean;
 }
 
@@ -50,6 +52,7 @@ export const FloatingHeader: React.FC<FloatingHeaderProps> = ({
   hiringCount,
   onBoostClick,
   onSubmitClick,
+  onSwitchRole,
   isMobile,
 }) => {
   const { t, language, setLanguage } = useLanguage();
@@ -231,22 +234,13 @@ export const FloatingHeader: React.FC<FloatingHeaderProps> = ({
             <span>{t('header.stats')}</span>
           </button>
 
-          {/* Boost CTA */}
+          {/* Startup Portal Switch CTA */}
           <button
-            onClick={onBoostClick}
-            className="h-9 px-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white text-xs font-bold flex items-center gap-1 transition-all shadow-md hover:shadow-lg shrink-0 border border-orange-400/30 cursor-pointer"
+            onClick={onSwitchRole}
+            className="h-9 px-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold flex items-center gap-1.5 transition-all shadow-md hover:shadow-lg shrink-0 border border-indigo-500/30 cursor-pointer"
           >
-            <Sparkles className="w-3.5 h-3.5 text-white animate-pulse" />
-            <span>Boost Startup</span>
-          </button>
-
-          {/* Submit CTA */}
-          <button
-            onClick={onSubmitClick}
-            className="h-9 px-3 rounded-xl bg-[#2E6F40] hover:bg-[#2E6F40]/90 text-white text-xs font-bold flex items-center gap-1 transition-all shadow-md hover:shadow-lg shrink-0 border border-emerald-500/30 cursor-pointer"
-          >
-            <Plus className="w-3.5 h-3.5" />
-            <span>Submit Startup</span>
+            <Building2 className="w-3.5 h-3.5" />
+            <span>For Startups</span>
           </button>
         </div>
       </header>
