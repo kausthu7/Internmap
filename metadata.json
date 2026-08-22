@@ -1,0 +1,6 @@
+{
+  "name": "Paris Startup Map",
+  "description": "Interactive Paris startup map with marker clustering, ecosystem filters, hiring directory, and submission hub.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
