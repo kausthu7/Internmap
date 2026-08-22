@@ -32,6 +32,7 @@ import {
 const LOCAL_STORAGE_CUSTOM_STARTUPS = 'paris_startups_custom_v1';
 const LOCAL_STORAGE_BOOKMARKS = 'paris_startups_bookmarks_v1';
 const LOCAL_STORAGE_DELETED_STARTUPS = 'paris_startups_deleted_v1';
+const LOCAL_STORAGE_BOOSTED_STARTUPS = 'paris_startups_boosted_v1';
 
 export default function App() {
   const { t } = useLanguage();
@@ -40,18 +41,31 @@ export default function App() {
     try {
       const saved = localStorage.getItem(LOCAL_STORAGE_CUSTOM_STARTUPS);
       const savedDeleted = localStorage.getItem(LOCAL_STORAGE_DELETED_STARTUPS);
+      const savedBoosted = localStorage.getItem(LOCAL_STORAGE_BOOSTED_STARTUPS);
+      
       const deletedIds: string[] = savedDeleted ? JSON.parse(savedDeleted) : [];
+      const boostedIds: string[] = savedBoosted ? JSON.parse(savedBoosted) : [];
       
       let baseList = PARIS_STARTUPS_DATA;
       if (deletedIds.length > 0) {
         baseList = baseList.filter(s => !deletedIds.includes(s.id));
       }
 
+      let combined: Startup[] = [];
       if (saved) {
         const custom: Startup[] = JSON.parse(saved);
-        return [...custom, ...baseList];
+        combined = [...custom, ...baseList];
+      } else {
+        combined = [...baseList];
       }
-      return baseList;
+
+      // Apply boosted status from localStorage
+      if (boostedIds.length > 0) {
+        combined = combined.map(s => 
+          boostedIds.includes(s.id) ? { ...s, isBoosted: true } : s
+        );
+      }
+      return combined;
     } catch (e) {
       console.error('Error loading custom startups', e);
     }
@@ -146,6 +160,14 @@ export default function App() {
           deletedIds.push(id);
           localStorage.setItem(LOCAL_STORAGE_DELETED_STARTUPS, JSON.stringify(deletedIds));
         }
+
+        // Remove from boosted storage as well
+        const savedBoosted = localStorage.getItem(LOCAL_STORAGE_BOOSTED_STARTUPS);
+        if (savedBoosted) {
+          const boostedIds: string[] = JSON.parse(savedBoosted);
+          const filteredBoosted = boostedIds.filter(bid => bid !== id);
+          localStorage.setItem(LOCAL_STORAGE_BOOSTED_STARTUPS, JSON.stringify(filteredBoosted));
+        }
       } catch (e) {
         console.error('Failed to persist deleted startup', e);
       }
@@ -160,6 +182,9 @@ export default function App() {
       try {
         const customOnly = updated.filter((s) => s.isCommunitySubmitted);
         localStorage.setItem(LOCAL_STORAGE_CUSTOM_STARTUPS, JSON.stringify(customOnly));
+
+        const boostedIds = updated.filter((s) => s.isBoosted).map((s) => s.id);
+        localStorage.setItem(LOCAL_STORAGE_BOOSTED_STARTUPS, JSON.stringify(boostedIds));
       } catch (e) {
         console.error('Failed to persist custom startup boost status', e);
       }
