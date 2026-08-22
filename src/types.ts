@@ -24,7 +24,13 @@ export type Sector =
   | 'CyberSecurity'
   | 'HRTech & Work'
   | 'Web3 & Gaming'
-  | 'Mobility & Logistics';
+  | 'Mobility & Logistics'
+  | 'Food Service / Fast Food (QSR)'
+  | 'Food Service / Coffee & Bakery'
+  | 'Food Service / Pizza Delivery'
+  | 'Grocery Retail / Supermarkets'
+  | 'Specialized Retail (Sporting Goods)'
+  | 'Discount Retail / Variety Store';
 
 export interface JobRole {
   title: string;

@@ -11,7 +11,9 @@ export const STARTUP_STAGES = [
 export const STARTUP_SECTORS = [
   'AI & DeepTech', 'FinTech & InsurTech', 'B2B SaaS & DevTools', 'HealthTech & Bio',
   'ClimateTech & Green', 'E-Commerce & Retail', 'CyberSecurity', 'HRTech & Work',
-  'Web3 & Gaming', 'Mobility & Logistics'
+  'Web3 & Gaming', 'Mobility & Logistics',
+  'Food Service / Fast Food (QSR)', 'Food Service / Coffee & Bakery', 'Food Service / Pizza Delivery',
+  'Grocery Retail / Supermarkets', 'Specialized Retail (Sporting Goods)', 'Discount Retail / Variety Store'
 ];
 
 export const PARIS_AREAS = [
@@ -1903,11 +1905,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "mcdonalds-11avenue",
     "name": "McDonald's (11 Avenue de Wagram)",
     "slug": "mcdonalds",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "McDonald's is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "McDonald's is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "17th arrondissement",
     "address": "11 Avenue de Wagram, 75017 Paris, France",
     "coordinates": [
@@ -1931,7 +1933,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Employé Polyvalent",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "17th arr.",
         "type": "Part-time",
         "url": "https://www.mcdonalds-recrute.fr/nos-restaurants/paris-wagram/"
@@ -1946,11 +1948,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "mcdonalds-192ruede",
     "name": "McDonald's (192 Rue de la Convention)",
     "slug": "mcdonalds",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "McDonald's is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "McDonald's is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "15th arrondissement",
     "address": "192 Rue de la Convention, 75015 Paris, France",
     "coordinates": [
@@ -1974,7 +1976,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Employé Polyvalent",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "15th arr.",
         "type": "Part-time",
         "url": "https://www.mcdonalds-recrute.fr/nos-restaurants/paris-convention/"
@@ -1989,11 +1991,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "mcdonalds-2bouleva",
     "name": "McDonald's (2 Boulevard Poissonnière)",
     "slug": "mcdonalds",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "McDonald's is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "McDonald's is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "9th arrondissement",
     "address": "2 Boulevard Poissonnière, 75009 Paris, France",
     "coordinates": [
@@ -2017,7 +2019,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Employé Polyvalent",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "9th arr.",
         "type": "Part-time",
         "url": "https://www.mcdonalds-recrute.fr/nos-restaurants/paris-bonne-nouvelle/"
@@ -2032,11 +2034,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "mcdonalds-208avenu",
     "name": "McDonald's (208 Avenue Jean Jaurès)",
     "slug": "mcdonalds",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "McDonald's is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "McDonald's is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "19th arrondissement",
     "address": "208 Avenue Jean Jaurès, 75019 Paris, France",
     "coordinates": [
@@ -2060,7 +2062,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Employé Polyvalent",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "19th arr.",
         "type": "Part-time",
         "url": "https://www.mcdonalds-recrute.fr/nos-restaurants/paris-porte-de-pantin/"
@@ -2075,11 +2077,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "mcdonalds-353ruede",
     "name": "McDonald's (353 Rue de Belleville)",
     "slug": "mcdonalds",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "McDonald's is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "McDonald's is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "19th arrondissement",
     "address": "353 Rue de Belleville, 75019 Paris, France",
     "coordinates": [
@@ -2103,7 +2105,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Employé Polyvalent",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "19th arr.",
         "type": "Part-time",
         "url": "https://www.mcdonalds-recrute.fr/nos-restaurants/paris-porte-des-lilas/"
@@ -2118,11 +2120,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "mcdonalds-67boulev",
     "name": "McDonald's (67 Boulevard Davout)",
     "slug": "mcdonalds",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "McDonald's is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "McDonald's is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "20th arrondissement",
     "address": "67 Boulevard Davout, 75020 Paris, France",
     "coordinates": [
@@ -2146,7 +2148,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Employé Polyvalent",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "20th arr.",
         "type": "Part-time",
         "url": "https://www.mcdonalds-recrute.fr/nos-restaurants/paris-porte-montreuil/"
@@ -2161,11 +2163,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "mcdonalds-77boulev",
     "name": "McDonald's (77 Boulevard Ornano)",
     "slug": "mcdonalds",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "McDonald's is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "McDonald's is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "Paris",
     "address": "77 Boulevard Ornano, 75865 Paris CEDEX 18, France",
     "coordinates": [
@@ -2189,7 +2191,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Employé Polyvalent",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "Paris",
         "type": "Part-time",
         "url": "https://www.mcdonalds-recrute.fr/nos-restaurants/paris-clignancourt/"
@@ -2203,11 +2205,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "mcdonalds-88bisrue",
     "name": "McDonald's (88 bis Rue Parmentier)",
     "slug": "mcdonalds",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "McDonald's is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "McDonald's is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "11th arrondissement",
     "address": "88 bis Rue Parmentier, 75011 Paris, France",
     "coordinates": [
@@ -2231,7 +2233,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Employé Polyvalent",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "11th arr.",
         "type": "Part-time",
         "url": "https://www.mcdonalds-recrute.fr/nos-restaurants/paris-parmentier/"
@@ -2246,11 +2248,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "mcdonalds-911avenu",
     "name": "McDonald's (9–11 Avenue de Choisy)",
     "slug": "mcdonalds",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "McDonald's is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "McDonald's is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "13th arrondissement",
     "address": "9–11 Avenue de Choisy, 75013 Paris, France",
     "coordinates": [
@@ -2274,7 +2276,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Employé Polyvalent",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "13th arr.",
         "type": "Part-time",
         "url": "https://www.mcdonalds-recrute.fr/nos-restaurants/paris-avenue-de-choisy/"
@@ -2289,11 +2291,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "five-guys-2bouleva",
     "name": "Five Guys (2 Boulevard Haussmann)",
     "slug": "five-guys",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Five Guys is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "Five Guys is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "9th arrondissement",
     "address": "2 Boulevard Haussmann, 75009 Paris, France",
     "coordinates": [
@@ -2317,7 +2319,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Equipier Polyvalent",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "9th arr.",
         "type": "Part-time",
         "url": "https://recrutement.fiveguys.fr/jobs?split_view=true"
@@ -2332,11 +2334,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "burger-king-93boulev",
     "name": "Burger King (93 Boulevard de Strasbourg)",
     "slug": "burger-king",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Burger King is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "Burger King is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "10th arrondissement",
     "address": "93 Boulevard de Strasbourg, 75010 Paris, France",
     "coordinates": [
@@ -2360,7 +2362,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Équipier•ère",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "10th arr.",
         "type": "Part-time",
         "url": "https://emploi.burgerking.fr/nos-metiers/equipier/"
@@ -2375,11 +2377,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "burger-king-25rueded",
     "name": "Burger King (25 Rue de Dunkerque)",
     "slug": "burger-king",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Burger King is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "Burger King is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "10th arrondissement",
     "address": "25 Rue de Dunkerque, 75010 Paris, France",
     "coordinates": [
@@ -2403,7 +2405,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Équipier•ère",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "10th arr.",
         "type": "Part-time",
         "url": "https://emploi.burgerking.fr/nos-metiers/equipier/"
@@ -2418,11 +2420,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "burger-king-20ruedel",
     "name": "Burger King (20 Rue de la Roquette)",
     "slug": "burger-king",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Burger King is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "Burger King is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "11th arrondissement",
     "address": "20 Rue de la Roquette, 75011 Paris, France",
     "coordinates": [
@@ -2446,7 +2448,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Équipier•ère",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "11th arr.",
         "type": "Part-time",
         "url": "https://emploi.burgerking.fr/nos-metiers/equipier/"
@@ -2461,11 +2463,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "burger-king-279avenu",
     "name": "Burger King (279 Avenue Daumesnil)",
     "slug": "burger-king",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Burger King is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "Burger King is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "12th arrondissement",
     "address": "279 Avenue Daumesnil, 75012 Paris, France",
     "coordinates": [
@@ -2489,7 +2491,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Équipier•ère",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "12th arr.",
         "type": "Part-time",
         "url": "https://emploi.burgerking.fr/nos-metiers/equipier/"
@@ -2504,11 +2506,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "burger-king-4avenued",
     "name": "Burger King (4 Avenue du Trône)",
     "slug": "burger-king",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Burger King is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "Burger King is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "12th arrondissement",
     "address": "4 Avenue du Trône, 75012 Paris, France",
     "coordinates": [
@@ -2532,7 +2534,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Équipier•ère",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "12th arr.",
         "type": "Part-time",
         "url": "https://emploi.burgerking.fr/nos-metiers/equipier/"
@@ -2547,11 +2549,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "burger-king-1ruegeor",
     "name": "Burger King (1 Rue George Balanchine)",
     "slug": "burger-king",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Burger King is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "Burger King is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "13th arrondissement",
     "address": "1 Rue George Balanchine, 75013 Paris, France",
     "coordinates": [
@@ -2575,7 +2577,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Équipier•ère",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "13th arr.",
         "type": "Part-time",
         "url": "https://emploi.burgerking.fr/nos-metiers/equipier/"
@@ -2590,11 +2592,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "burger-king-7981quai",
     "name": "Burger King (79-81 Quai de la Gare)",
     "slug": "burger-king",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Burger King is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "Burger King is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "13th arrondissement",
     "address": "79-81 Quai de la Gare, 75013 Paris, France",
     "coordinates": [
@@ -2618,7 +2620,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Équipier•ère",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "13th arr.",
         "type": "Part-time",
         "url": "https://emploi.burgerking.fr/nos-metiers/equipier/"
@@ -2633,11 +2635,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "burger-king-7880aven",
     "name": "Burger King (78-80 Avenue du Général Leclerc)",
     "slug": "burger-king",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Burger King is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "Burger King is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "14th arrondissement",
     "address": "78-80 Avenue du Général Leclerc, 75014 Paris, France",
     "coordinates": [
@@ -2661,7 +2663,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Équipier•ère",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "14th arr.",
         "type": "Part-time",
         "url": "https://emploi.burgerking.fr/nos-metiers/equipier/"
@@ -2676,11 +2678,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "burger-king-84boulev",
     "name": "Burger King (84 Boulevard du Montparnasse)",
     "slug": "burger-king",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Burger King is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "Burger King is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "14th arrondissement",
     "address": "84 Boulevard du Montparnasse, 75014 Paris, France",
     "coordinates": [
@@ -2704,7 +2706,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Équipier•ère",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "14th arr.",
         "type": "Part-time",
         "url": "https://emploi.burgerking.fr/nos-metiers/equipier/"
@@ -2719,11 +2721,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "burger-king-7ruelino",
     "name": "Burger King (7 Rue Linois (Immeuble Panoramic))",
     "slug": "burger-king",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Burger King is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "Burger King is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "15th arrondissement",
     "address": "7 Rue Linois (Immeuble Panoramic), 75015 Paris, France",
     "coordinates": [
@@ -2747,7 +2749,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Équipier•ère",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "15th arr.",
         "type": "Part-time",
         "url": "https://emploi.burgerking.fr/nos-metiers/equipier/"
@@ -2762,11 +2764,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "burger-king-286ruede",
     "name": "Burger King (286 Rue de Vaugirard)",
     "slug": "burger-king",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Burger King is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "Burger King is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "15th arrondissement",
     "address": "286 Rue de Vaugirard, 75015 Paris, France",
     "coordinates": [
@@ -2790,7 +2792,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Équipier•ère",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "15th arr.",
         "type": "Part-time",
         "url": "https://emploi.burgerking.fr/nos-metiers/equipier/"
@@ -2805,11 +2807,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "burger-king-18avenue",
     "name": "Burger King (18 Avenue du Président Kennedy)",
     "slug": "burger-king",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Burger King is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "Burger King is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "16th arrondissement",
     "address": "18 Avenue du Président Kennedy, 75016 Paris, France",
     "coordinates": [
@@ -2833,7 +2835,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Équipier•ère",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "16th arr.",
         "type": "Part-time",
         "url": "https://emploi.burgerking.fr/nos-metiers/equipier/"
@@ -2848,11 +2850,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "burger-king-16ruedet",
     "name": "Burger King (16 Rue de Tilsitt)",
     "slug": "burger-king",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Burger King is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "Burger King is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "17th arrondissement",
     "address": "16 Rue de Tilsitt, 75017 Paris, France",
     "coordinates": [
@@ -2876,7 +2878,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Équipier•ère",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "17th arr.",
         "type": "Part-time",
         "url": "https://emploi.burgerking.fr/nos-metiers/equipier/"
@@ -2891,11 +2893,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "burger-king-187avenu",
     "name": "Burger King (187 Avenue de Clichy)",
     "slug": "burger-king",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Burger King is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "Burger King is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "17th arrondissement",
     "address": "187 Avenue de Clichy, 75017 Paris, France",
     "coordinates": [
@@ -2919,7 +2921,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Équipier•ère",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "17th arr.",
         "type": "Part-time",
         "url": "https://emploi.burgerking.fr/nos-metiers/equipier/"
@@ -2934,11 +2936,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "burger-king-3bouleva",
     "name": "Burger King (3 Boulevard Barbès)",
     "slug": "burger-king",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Burger King is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "Burger King is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "18th arrondissement",
     "address": "3 Boulevard Barbès, 75018 Paris, France",
     "coordinates": [
@@ -2962,7 +2964,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Équipier•ère",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "18th arr.",
         "type": "Part-time",
         "url": "https://emploi.burgerking.fr/nos-metiers/equipier/"
@@ -2977,11 +2979,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "burger-king-2ruepier",
     "name": "Burger King (2 Rue Pierre Lescot)",
     "slug": "burger-king",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Burger King is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "Burger King is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "1st arrondissement",
     "address": "2 Rue Pierre Lescot, 75001 Paris, France",
     "coordinates": [
@@ -3005,7 +3007,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Équipier•ère",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "1st arr.",
         "type": "Part-time",
         "url": "https://emploi.burgerking.fr/nos-metiers/equipier/"
@@ -3020,11 +3022,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "burger-king-23placed",
     "name": "Burger King (23 Place de la République)",
     "slug": "burger-king",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Burger King is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "Burger King is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "3rd arrondissement",
     "address": "23 Place de la République, 75003 Paris, France",
     "coordinates": [
@@ -3048,7 +3050,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Équipier•ère",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "3rd arr.",
         "type": "Part-time",
         "url": "https://emploi.burgerking.fr/nos-metiers/equipier/"
@@ -3063,11 +3065,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "burger-king-63boulev",
     "name": "Burger King (63 Boulevard Saint-Michel)",
     "slug": "burger-king",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Burger King is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "Burger King is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "5th arrondissement",
     "address": "63 Boulevard Saint-Michel, 75005 Paris, France",
     "coordinates": [
@@ -3091,7 +3093,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Équipier•ère",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "5th arr.",
         "type": "Part-time",
         "url": "https://emploi.burgerking.fr/nos-metiers/equipier/"
@@ -3106,11 +3108,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "burger-king-124ruela",
     "name": "Burger King (124 Rue La Boétie)",
     "slug": "burger-king",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Burger King is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "Burger King is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "8th arrondissement",
     "address": "124 Rue La Boétie, 75008 Paris, France",
     "coordinates": [
@@ -3134,7 +3136,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Équipier•ère",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "8th arr.",
         "type": "Part-time",
         "url": "https://emploi.burgerking.fr/nos-metiers/equipier/"
@@ -3149,11 +3151,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "burger-king-36boulev",
     "name": "Burger King (36 Boulevard des Italiens)",
     "slug": "burger-king",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Burger King is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "Burger King is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "9th arrondissement",
     "address": "36 Boulevard des Italiens, 75009 Paris, France",
     "coordinates": [
@@ -3177,7 +3179,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Équipier•ère",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "9th arr.",
         "type": "Part-time",
         "url": "https://emploi.burgerking.fr/nos-metiers/equipier/"
@@ -3192,11 +3194,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "burger-king-statione",
     "name": "Burger King (Station exterior)",
     "slug": "burger-king",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Burger King is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "Burger King is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "9th arrondissement",
     "address": "Station exterior, 2 Rue d'Amsterdam, 75009 Paris, France",
     "coordinates": [
@@ -3220,7 +3222,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Équipier•ère",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "9th arr.",
         "type": "Part-time",
         "url": "https://emploi.burgerking.fr/nos-metiers/equipier/"
@@ -3235,11 +3237,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "kfc-102terra",
     "name": "KFC (102 Terrasse Boieldieu)",
     "slug": "kfc",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "KFC is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "KFC is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "Paris",
     "address": "102 Terrasse Boieldieu, 92800 Puteaux, France",
     "coordinates": [
@@ -3263,7 +3265,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Equipier Polyvalent",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "Paris",
         "type": "Part-time",
         "url": "https://fr.indeed.com/q-kfc-le-week-end-l-paris-%2875%29-emplois.html"
@@ -3277,11 +3279,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "kfc-117ruesa",
     "name": "KFC (117 Rue Saint-Lazare)",
     "slug": "kfc",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "KFC is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "KFC is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "8th arrondissement",
     "address": "117 Rue Saint-Lazare, 75008 Paris, France",
     "coordinates": [
@@ -3305,7 +3307,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Equipier Polyvalent",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "8th arr.",
         "type": "Part-time",
         "url": "https://fr.indeed.com/q-kfc-%C3%89quipier-polyvalent-l-paris-%2875%29-emplois.html"
@@ -3320,11 +3322,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "kfc-16boulev",
     "name": "KFC (16 Boulevard de Clichy)",
     "slug": "kfc",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "KFC is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "KFC is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "18th arrondissement",
     "address": "16 Boulevard de Clichy, 75018 Paris, France",
     "coordinates": [
@@ -3348,7 +3350,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Equipier Polyvalent",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "18th arr.",
         "type": "Part-time",
         "url": "https://fr.indeed.com/q-kfc-l-paris-9e-%2875%29-emplois.html"
@@ -3363,11 +3365,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "kfc-76avenue",
     "name": "KFC (76 Avenue d'Italie)",
     "slug": "kfc",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "KFC is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "KFC is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "13th arrondissement",
     "address": "76 Avenue d'Italie, 75013 Paris, France",
     "coordinates": [
@@ -3391,7 +3393,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Equipier Polyvalent",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "13th arr.",
         "type": "Part-time",
         "url": "https://fr.indeed.com/emplois?jlid=38ec80440089288&q=equipier+polyvalent+en+temps+partiel+postes&rbl=Paris+%2875%29"
@@ -3406,11 +3408,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "kfc-94000crt",
     "name": "KFC (94000 Créteil)",
     "slug": "kfc",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "KFC is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "KFC is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "Paris",
     "address": "94000 Créteil, France",
     "coordinates": [
@@ -3434,7 +3436,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Equipier Polyvalent",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "Paris",
         "type": "Part-time",
         "url": "https://fr.indeed.com/q-kfc-%C3%89quipier-polyvalent-l-paris-%2875%29-emplois.html"
@@ -3448,11 +3450,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "kfc-94120fon",
     "name": "KFC (94120 Fontenay-sous-Bois)",
     "slug": "kfc",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "KFC is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Fast Food (QSR) company in Paris",
+    "description": "KFC is a verified provider of food service / fast food (qsr) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Fast Food (QSR)",
     "area": "Paris",
     "address": "94120 Fontenay-sous-Bois, France",
     "coordinates": [
@@ -3476,7 +3478,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Equipier Polyvalent",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Fast Food (QSR)",
         "location": "Paris",
         "type": "Part-time",
         "url": "https://fr.indeed.com/q-kfc-%C3%89quipier-polyvalent-l-paris-%2875%29-emplois.html"
@@ -3490,11 +3492,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "decathlon-203boule",
     "name": "Decathlon (203 Boulevard Macdonald)",
     "slug": "decathlon",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Decathlon is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Specialized Retail (Sporting Goods) company in Paris",
+    "description": "Decathlon is a verified provider of specialized retail (sporting goods) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Specialized Retail (Sporting Goods)",
     "area": "19th arrondissement",
     "address": "203 Boulevard Macdonald, 75019 Paris, France",
     "coordinates": [
@@ -3518,7 +3520,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Sales / Customer Service Advisor",
-        "department": "E-Commerce & Retail",
+        "department": "Specialized Retail (Sporting Goods)",
         "location": "19th arr.",
         "type": "Part-time",
         "url": "https://joinus.decathlon.fr/fr/annonce/3247217-vendeur-se-cdi-temps-partiel-a-partir-de-septembre-75019-paris?s_o=wttj"
@@ -3533,11 +3535,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "decathlon-46ruelou",
     "name": "Decathlon (4–6 Rue Louis Armand)",
     "slug": "decathlon",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Decathlon is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Specialized Retail (Sporting Goods) company in Paris",
+    "description": "Decathlon is a verified provider of specialized retail (sporting goods) services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Specialized Retail (Sporting Goods)",
     "area": "15th arrondissement",
     "address": "4–6 Rue Louis Armand, 75015 Paris, France",
     "coordinates": [
@@ -3561,7 +3563,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Sales / Customer Service Advisor",
-        "department": "E-Commerce & Retail",
+        "department": "Specialized Retail (Sporting Goods)",
         "location": "15th arr.",
         "type": "Part-time",
         "url": "https://joinus.decathlon.fr/en/annonce/4547765-conseiller-ere-vente-omnicanal-hf-cdi-temps-partiel-75015-paris-15e-arrondissement"
@@ -3576,11 +3578,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "monoprix-71ruesai",
     "name": "Monoprix (71 Rue Saint-Antoine)",
     "slug": "monoprix",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Monoprix is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Grocery Retail / Supermarkets company in Paris",
+    "description": "Monoprix is a verified provider of grocery retail / supermarkets services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Grocery Retail / Supermarkets",
     "area": "4th arrondissement",
     "address": "71 Rue Saint-Antoine, 75004 Paris, France",
     "coordinates": [
@@ -3604,7 +3606,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Student part-time cashier / store employee",
-        "department": "E-Commerce & Retail",
+        "department": "Grocery Retail / Supermarkets",
         "location": "4th arr.",
         "type": "Part-time",
         "url": "https://fr.indeed.com/viewjob?jk=4a9bcf51dc510310"
@@ -3619,11 +3621,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "carrefour-13rsiden",
     "name": "Carrefour (13 Résidence Martinval)",
     "slug": "carrefour",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Carrefour is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Grocery Retail / Supermarkets company in Paris",
+    "description": "Carrefour is a verified provider of grocery retail / supermarkets services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Grocery Retail / Supermarkets",
     "area": "Paris",
     "address": "13 Résidence Martinval, 78240 Chambourcy, France",
     "coordinates": [
@@ -3647,7 +3649,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Student commercial employee / cashier",
-        "department": "E-Commerce & Retail",
+        "department": "Grocery Retail / Supermarkets",
         "location": "Paris",
         "type": "Part-time",
         "url": "https://fr.indeed.com/q-carrefour-job-%C3%89tudiant-l-paris-%2875%29-emplois.html"
@@ -3661,11 +3663,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "carrefour-280avenu",
     "name": "Carrefour (280 Avenue Gabriel Péri)",
     "slug": "carrefour",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Carrefour is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Grocery Retail / Supermarkets company in Paris",
+    "description": "Carrefour is a verified provider of grocery retail / supermarkets services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Grocery Retail / Supermarkets",
     "area": "Paris",
     "address": "280 Avenue Gabriel Péri, 78360 Montesson, France",
     "coordinates": [
@@ -3689,7 +3691,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Student commercial employee / cashier",
-        "department": "E-Commerce & Retail",
+        "department": "Grocery Retail / Supermarkets",
         "location": "Paris",
         "type": "Part-time",
         "url": "https://fr.indeed.com/q-carrefour-temps-partiel-l-paris-%2875%29-emplois.html"
@@ -3703,11 +3705,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "carrefour-75004par",
     "name": "Carrefour (75004 Paris)",
     "slug": "carrefour",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Carrefour is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Grocery Retail / Supermarkets company in Paris",
+    "description": "Carrefour is a verified provider of grocery retail / supermarkets services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Grocery Retail / Supermarkets",
     "area": "4th arrondissement",
     "address": "75004 Paris, France — exact street address not exposed in current listing, France",
     "coordinates": [
@@ -3731,7 +3733,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Student commercial employee / cashier",
-        "department": "E-Commerce & Retail",
+        "department": "Grocery Retail / Supermarkets",
         "location": "4th arr.",
         "type": "Part-time",
         "url": "https://fr.indeed.com/viewjob?jk=a8a19fc23ace8b18"
@@ -3746,11 +3748,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "carrefour-75006par",
     "name": "Carrefour (75006 Paris)",
     "slug": "carrefour",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Carrefour is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Grocery Retail / Supermarkets company in Paris",
+    "description": "Carrefour is a verified provider of grocery retail / supermarkets services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Grocery Retail / Supermarkets",
     "area": "6th arrondissement",
     "address": "75006 Paris, France — exact street address not exposed in current listing, France",
     "coordinates": [
@@ -3774,7 +3776,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Student commercial employee / cashier",
-        "department": "E-Commerce & Retail",
+        "department": "Grocery Retail / Supermarkets",
         "location": "6th arr.",
         "type": "Part-time",
         "url": "https://fr.indeed.com/q-carrefour-%C3%89tudiant-l-cr%C3%A9teil-%2894%29-emplois.html"
@@ -3789,11 +3791,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "carrefour-85routed",
     "name": "Carrefour (85 Route de Provins)",
     "slug": "carrefour",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Carrefour is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Grocery Retail / Supermarkets company in Paris",
+    "description": "Carrefour is a verified provider of grocery retail / supermarkets services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Grocery Retail / Supermarkets",
     "area": "Paris",
     "address": "85 Route de Provins, 94490 Ormesson-sur-Marne, France",
     "coordinates": [
@@ -3817,7 +3819,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Student commercial employee / cashier",
-        "department": "E-Commerce & Retail",
+        "department": "Grocery Retail / Supermarkets",
         "location": "Paris",
         "type": "Part-time",
         "url": "https://fr.indeed.com/q-%C3%89tudiant-carrefour-l-paris-%2875%29-emplois.html"
@@ -3831,11 +3833,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "carrefour-routedes",
     "name": "Carrefour (Route des Petits Ponts)",
     "slug": "carrefour",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Carrefour is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Grocery Retail / Supermarkets company in Paris",
+    "description": "Carrefour is a verified provider of grocery retail / supermarkets services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Grocery Retail / Supermarkets",
     "area": "Paris",
     "address": "Route des Petits Ponts, 93270 Sevran, France",
     "coordinates": [
@@ -3859,7 +3861,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Student commercial employee / cashier",
-        "department": "E-Commerce & Retail",
+        "department": "Grocery Retail / Supermarkets",
         "location": "Paris",
         "type": "Part-time",
         "url": "https://fr.indeed.com/q-carrefour-%C3%89tudiant-l-paris-15e-%2875%29-emplois.html"
@@ -3873,11 +3875,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "franprix-230ruedu",
     "name": "Franprix (230 Rue du Faubourg Saint-Honoré)",
     "slug": "franprix",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Franprix is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Grocery Retail / Supermarkets company in Paris",
+    "description": "Franprix is a verified provider of grocery retail / supermarkets services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Grocery Retail / Supermarkets",
     "area": "8th arrondissement",
     "address": "230 Rue du Faubourg Saint-Honoré, 75008 Paris, France",
     "coordinates": [
@@ -3901,7 +3903,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Store / cashier roles",
-        "department": "E-Commerce & Retail",
+        "department": "Grocery Retail / Supermarkets",
         "location": "8th arr.",
         "type": "Part-time",
         "url": "https://fr.indeed.com/Paris-%2875%29-Emplois-Monoprix%2C-Franprix%2C-Carrefour"
@@ -3916,11 +3918,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "franprix-112ruesa",
     "name": "Franprix (112 Rue Saint-Antoine)",
     "slug": "franprix",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Franprix is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Grocery Retail / Supermarkets company in Paris",
+    "description": "Franprix is a verified provider of grocery retail / supermarkets services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Grocery Retail / Supermarkets",
     "area": "4th arrondissement",
     "address": "112 Rue Saint-Antoine, 75004 Paris, France",
     "coordinates": [
@@ -3944,7 +3946,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Store / cashier roles",
-        "department": "E-Commerce & Retail",
+        "department": "Grocery Retail / Supermarkets",
         "location": "4th arr.",
         "type": "Part-time",
         "url": "https://fr.indeed.com/Paris-%2875%29-Emplois-Monoprix%2C-Franprix%2C-Carrefour"
@@ -3959,11 +3961,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "franprix-86boulev",
     "name": "Franprix (86 Boulevard Saint-Michel)",
     "slug": "franprix",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Franprix is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Grocery Retail / Supermarkets company in Paris",
+    "description": "Franprix is a verified provider of grocery retail / supermarkets services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Grocery Retail / Supermarkets",
     "area": "5th arrondissement",
     "address": "86 Boulevard Saint-Michel, 75005 Paris, France",
     "coordinates": [
@@ -3987,7 +3989,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Store / cashier roles",
-        "department": "E-Commerce & Retail",
+        "department": "Grocery Retail / Supermarkets",
         "location": "5th arr.",
         "type": "Part-time",
         "url": "https://fr.indeed.com/Paris-%2875%29-Emplois-Monoprix%2C-Franprix%2C-Carrefour"
@@ -4002,11 +4004,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "franprix-24ruedel",
     "name": "Franprix (24 Rue de l'Arrivée)",
     "slug": "franprix",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Franprix is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Grocery Retail / Supermarkets company in Paris",
+    "description": "Franprix is a verified provider of grocery retail / supermarkets services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Grocery Retail / Supermarkets",
     "area": "14th arrondissement",
     "address": "24 Rue de l'Arrivée, 75014 Paris, France",
     "coordinates": [
@@ -4030,7 +4032,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Store / cashier roles",
-        "department": "E-Commerce & Retail",
+        "department": "Grocery Retail / Supermarkets",
         "location": "14th arr.",
         "type": "Part-time",
         "url": "https://fr.indeed.com/Paris-%2875%29-Emplois-Monoprix%2C-Franprix%2C-Carrefour"
@@ -4045,11 +4047,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "lidl-210212av",
     "name": "Lidl (210-212 Avenue du Maine)",
     "slug": "lidl",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Lidl is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Grocery Retail / Supermarkets company in Paris",
+    "description": "Lidl is a verified provider of grocery retail / supermarkets services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Grocery Retail / Supermarkets",
     "area": "14th arrondissement",
     "address": "210-212 Avenue du Maine, 75014 Paris, France",
     "coordinates": [
@@ -4073,7 +4075,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Store / cashier roles",
-        "department": "E-Commerce & Retail",
+        "department": "Grocery Retail / Supermarkets",
         "location": "14th arr.",
         "type": "Part-time",
         "url": "https://jobs.lidl.fr/"
@@ -4088,11 +4090,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "lidl-34rueder",
     "name": "Lidl (34 Rue de Reuilly)",
     "slug": "lidl",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Lidl is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Grocery Retail / Supermarkets company in Paris",
+    "description": "Lidl is a verified provider of grocery retail / supermarkets services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Grocery Retail / Supermarkets",
     "area": "12th arrondissement",
     "address": "34 Rue de Reuilly, 75012 Paris, France",
     "coordinates": [
@@ -4116,7 +4118,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Store / cashier roles",
-        "department": "E-Commerce & Retail",
+        "department": "Grocery Retail / Supermarkets",
         "location": "12th arr.",
         "type": "Part-time",
         "url": "https://jobs.lidl.fr/"
@@ -4131,11 +4133,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "action-bagnolet",
     "name": "Action (Bagnolet (93) — 45 openings)",
     "slug": "action",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Action is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Discount Retail / Variety Store company in Paris",
+    "description": "Action is a verified provider of discount retail / variety store services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Discount Retail / Variety Store",
     "area": "Paris",
     "address": "Bagnolet (93) — 45 openings, France",
     "coordinates": [
@@ -4159,7 +4161,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Store employee",
-        "department": "E-Commerce & Retail",
+        "department": "Discount Retail / Variety Store",
         "location": "Paris",
         "type": "Part-time",
         "url": "https://www.action.jobs/fr-fr/"
@@ -4173,11 +4175,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "action-pinaysur",
     "name": "Action (Épinay-sur-Seine (93))",
     "slug": "action",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Action is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Discount Retail / Variety Store company in Paris",
+    "description": "Action is a verified provider of discount retail / variety store services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Discount Retail / Variety Store",
     "area": "Paris",
     "address": "Épinay-sur-Seine (93), France",
     "coordinates": [
@@ -4201,7 +4203,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Store employee",
-        "department": "E-Commerce & Retail",
+        "department": "Discount Retail / Variety Store",
         "location": "Paris",
         "type": "Part-time",
         "url": "https://www.action.jobs/fr-fr/"
@@ -4215,11 +4217,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "action-asniress",
     "name": "Action (Asnières-sur-Seine (92))",
     "slug": "action",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Action is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Discount Retail / Variety Store company in Paris",
+    "description": "Action is a verified provider of discount retail / variety store services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Discount Retail / Variety Store",
     "area": "Paris",
     "address": "Asnières-sur-Seine (92), France",
     "coordinates": [
@@ -4243,7 +4245,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Store employee",
-        "department": "E-Commerce & Retail",
+        "department": "Discount Retail / Variety Store",
         "location": "Paris",
         "type": "Part-time",
         "url": "https://www.action.jobs/fr-fr/"
@@ -4257,11 +4259,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "action-houilles",
     "name": "Action (Houilles (78))",
     "slug": "action",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Action is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Discount Retail / Variety Store company in Paris",
+    "description": "Action is a verified provider of discount retail / variety store services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Discount Retail / Variety Store",
     "area": "Paris",
     "address": "Houilles (78), France",
     "coordinates": [
@@ -4285,7 +4287,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Store employee",
-        "department": "E-Commerce & Retail",
+        "department": "Discount Retail / Variety Store",
         "location": "Paris",
         "type": "Part-time",
         "url": "https://www.action.jobs/fr-fr/"
@@ -4299,11 +4301,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "starbucks-bddescap",
     "name": "Starbucks (Bd des Capucines)",
     "slug": "starbucks",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Starbucks is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Coffee & Bakery company in Paris",
+    "description": "Starbucks is a verified provider of food service / coffee & bakery services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Coffee & Bakery",
     "area": "Paris",
     "address": "Bd des Capucines, Paris, France",
     "coordinates": [
@@ -4327,7 +4329,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Barista / store team",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Coffee & Bakery",
         "location": "Paris",
         "type": "Part-time",
         "url": "https://www.starbucks.fr/recrutement"
@@ -4341,11 +4343,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "starbucks-avenuede",
     "name": "Starbucks (Avenue de l'Opéra)",
     "slug": "starbucks",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Starbucks is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Coffee & Bakery company in Paris",
+    "description": "Starbucks is a verified provider of food service / coffee & bakery services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Coffee & Bakery",
     "area": "Paris",
     "address": "Avenue de l'Opéra, Paris, France",
     "coordinates": [
@@ -4369,7 +4371,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Barista / store team",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Coffee & Bakery",
         "location": "Paris",
         "type": "Part-time",
         "url": "https://www.starbucks.fr/recrutement"
@@ -4383,11 +4385,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "starbucks-ruedelch",
     "name": "Starbucks (Rue de l'Échelle)",
     "slug": "starbucks",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Starbucks is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Coffee & Bakery company in Paris",
+    "description": "Starbucks is a verified provider of food service / coffee & bakery services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Coffee & Bakery",
     "area": "Paris",
     "address": "Rue de l'Échelle, Paris, France",
     "coordinates": [
@@ -4411,7 +4413,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Barista / store team",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Coffee & Bakery",
         "location": "Paris",
         "type": "Part-time",
         "url": "https://www.starbucks.fr/recrutement"
@@ -4425,11 +4427,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "starbucks-17bddeva",
     "name": "Starbucks (17 Bd de Vaugirard)",
     "slug": "starbucks",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Starbucks is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Coffee & Bakery company in Paris",
+    "description": "Starbucks is a verified provider of food service / coffee & bakery services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Coffee & Bakery",
     "area": "15th arrondissement",
     "address": "17 Bd de Vaugirard, 75015 Paris, France",
     "coordinates": [
@@ -4453,7 +4455,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Barista / store team",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Coffee & Bakery",
         "location": "15th arr.",
         "type": "Part-time",
         "url": "https://www.starbucks.fr/recrutement"
@@ -4468,11 +4470,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "starbucks-ruedeber",
     "name": "Starbucks (Rue de Bercy)",
     "slug": "starbucks",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Starbucks is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Coffee & Bakery company in Paris",
+    "description": "Starbucks is a verified provider of food service / coffee & bakery services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Coffee & Bakery",
     "area": "Paris",
     "address": "Rue de Bercy, Paris, France",
     "coordinates": [
@@ -4496,7 +4498,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Barista / store team",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Coffee & Bakery",
         "location": "Paris",
         "type": "Part-time",
         "url": "https://www.starbucks.fr/recrutement"
@@ -4510,11 +4512,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "starbucks-4ruedu8m",
     "name": "Starbucks (4 Rue du 8 Mai 1945)",
     "slug": "starbucks",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Starbucks is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Coffee & Bakery company in Paris",
+    "description": "Starbucks is a verified provider of food service / coffee & bakery services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Coffee & Bakery",
     "area": "10th arrondissement",
     "address": "4 Rue du 8 Mai 1945, 75010 Paris, France",
     "coordinates": [
@@ -4538,7 +4540,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Barista / store team",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Coffee & Bakery",
         "location": "10th arr.",
         "type": "Part-time",
         "url": "https://www.starbucks.fr/recrutement"
@@ -4553,11 +4555,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "starbucks-18rueded",
     "name": "Starbucks (18 Rue de Dunkerque)",
     "slug": "starbucks",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Starbucks is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Coffee & Bakery company in Paris",
+    "description": "Starbucks is a verified provider of food service / coffee & bakery services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Coffee & Bakery",
     "area": "10th arrondissement",
     "address": "18 Rue de Dunkerque, 75010 Paris, France",
     "coordinates": [
@@ -4581,7 +4583,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Barista / store team",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Coffee & Bakery",
         "location": "10th arr.",
         "type": "Part-time",
         "url": "https://www.starbucks.fr/recrutement"
@@ -4596,11 +4598,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "starbucks-1crderom",
     "name": "Starbucks (1 Cr de Rome)",
     "slug": "starbucks",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Starbucks is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Coffee & Bakery company in Paris",
+    "description": "Starbucks is a verified provider of food service / coffee & bakery services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Coffee & Bakery",
     "area": "8th arrondissement",
     "address": "1 Cr de Rome, 75008 Paris, France",
     "coordinates": [
@@ -4624,7 +4626,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Barista / store team",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Coffee & Bakery",
         "location": "8th arr.",
         "type": "Part-time",
         "url": "https://www.starbucks.fr/recrutement"
@@ -4639,11 +4641,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "starbucks-70bddumo",
     "name": "Starbucks (70 Bd du Montparnasse)",
     "slug": "starbucks",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Starbucks is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Coffee & Bakery company in Paris",
+    "description": "Starbucks is a verified provider of food service / coffee & bakery services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Coffee & Bakery",
     "area": "14th arrondissement",
     "address": "70 Bd du Montparnasse, 75014 Paris, France",
     "coordinates": [
@@ -4667,7 +4669,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Barista / store team",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Coffee & Bakery",
         "location": "14th arr.",
         "type": "Part-time",
         "url": "https://www.starbucks.fr/recrutement"
@@ -4682,11 +4684,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "starbucks-11bddesb",
     "name": "Starbucks (11 Bd de Sébastopol)",
     "slug": "starbucks",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Starbucks is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Coffee & Bakery company in Paris",
+    "description": "Starbucks is a verified provider of food service / coffee & bakery services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Coffee & Bakery",
     "area": "1st arrondissement",
     "address": "11 Bd de Sébastopol, 75001 Paris, France",
     "coordinates": [
@@ -4710,7 +4712,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Barista / store team",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Coffee & Bakery",
         "location": "1st arr.",
         "type": "Part-time",
         "url": "https://www.starbucks.fr/recrutement"
@@ -4725,11 +4727,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "starbucks-32bdhaus",
     "name": "Starbucks (32 Bd Haussmann)",
     "slug": "starbucks",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Starbucks is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Coffee & Bakery company in Paris",
+    "description": "Starbucks is a verified provider of food service / coffee & bakery services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Coffee & Bakery",
     "area": "9th arrondissement",
     "address": "32 Bd Haussmann, 75009 Paris, France",
     "coordinates": [
@@ -4753,7 +4755,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Barista / store team",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Coffee & Bakery",
         "location": "9th arr.",
         "type": "Part-time",
         "url": "https://www.starbucks.fr/recrutement"
@@ -4768,11 +4770,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "starbucks-multiple",
     "name": "Starbucks (Multiple active points including level -3 and 1 Passage de La Canopée)",
     "slug": "starbucks",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Starbucks is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Coffee & Bakery company in Paris",
+    "description": "Starbucks is a verified provider of food service / coffee & bakery services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Coffee & Bakery",
     "area": "Paris",
     "address": "Multiple active points including level -3 and 1 Passage de La Canopée, France",
     "coordinates": [
@@ -4796,7 +4798,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Barista / store team",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Coffee & Bakery",
         "location": "Paris",
         "type": "Part-time",
         "url": "https://www.starbucks.fr/recrutement"
@@ -4810,11 +4812,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "starbucks-67ruelaf",
     "name": "Starbucks (67 Rue La Fayette)",
     "slug": "starbucks",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Starbucks is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Coffee & Bakery company in Paris",
+    "description": "Starbucks is a verified provider of food service / coffee & bakery services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Coffee & Bakery",
     "area": "9th arrondissement",
     "address": "67 Rue La Fayette, 75009 Paris, France",
     "coordinates": [
@@ -4838,7 +4840,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Barista / store team",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Coffee & Bakery",
         "location": "9th arr.",
         "type": "Part-time",
         "url": "https://www.starbucks.fr/recrutement"
@@ -4853,11 +4855,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "starbucks-75001par",
     "name": "Starbucks (75001 Paris)",
     "slug": "starbucks",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Starbucks is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Coffee & Bakery company in Paris",
+    "description": "Starbucks is a verified provider of food service / coffee & bakery services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Coffee & Bakery",
     "area": "1st arrondissement",
     "address": "75001 Paris, France",
     "coordinates": [
@@ -4881,7 +4883,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Barista / store team",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Coffee & Bakery",
         "location": "1st arr.",
         "type": "Part-time",
         "url": "https://www.starbucks.fr/recrutement"
@@ -4896,11 +4898,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "starbucks-10rueduh",
     "name": "Starbucks (10 Rue du Havre)",
     "slug": "starbucks",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Starbucks is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Coffee & Bakery company in Paris",
+    "description": "Starbucks is a verified provider of food service / coffee & bakery services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Coffee & Bakery",
     "area": "9th arrondissement",
     "address": "10 Rue du Havre, 75009 Paris, France",
     "coordinates": [
@@ -4924,7 +4926,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Barista / store team",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Coffee & Bakery",
         "location": "9th arr.",
         "type": "Part-time",
         "url": "https://www.starbucks.fr/recrutement"
@@ -4939,11 +4941,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "starbucks-77rueram",
     "name": "Starbucks (77 Rue Rambuteau)",
     "slug": "starbucks",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Starbucks is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Coffee & Bakery company in Paris",
+    "description": "Starbucks is a verified provider of food service / coffee & bakery services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Coffee & Bakery",
     "area": "1st arrondissement",
     "address": "77 Rue Rambuteau, 75001 Paris, France",
     "coordinates": [
@@ -4967,7 +4969,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Barista / store team",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Coffee & Bakery",
         "location": "1st arr.",
         "type": "Part-time",
         "url": "https://www.starbucks.fr/recrutement"
@@ -4982,11 +4984,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "starbucks-24bdsain",
     "name": "Starbucks (24 Bd Saint-Michel)",
     "slug": "starbucks",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Starbucks is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Coffee & Bakery company in Paris",
+    "description": "Starbucks is a verified provider of food service / coffee & bakery services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Coffee & Bakery",
     "area": "6th arrondissement",
     "address": "24 Bd Saint-Michel, 75006 Paris, France",
     "coordinates": [
@@ -5010,7 +5012,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Barista / store team",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Coffee & Bakery",
         "location": "6th arr.",
         "type": "Part-time",
         "url": "https://www.starbucks.fr/recrutement"
@@ -5025,11 +5027,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "starbucks-107avdef",
     "name": "Starbucks (107 Av. de France)",
     "slug": "starbucks",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Starbucks is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Coffee & Bakery company in Paris",
+    "description": "Starbucks is a verified provider of food service / coffee & bakery services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Coffee & Bakery",
     "area": "13th arrondissement",
     "address": "107 Av. de France, 75013 Paris, France",
     "coordinates": [
@@ -5053,7 +5055,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Barista / store team",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Coffee & Bakery",
         "location": "13th arr.",
         "type": "Part-time",
         "url": "https://www.starbucks.fr/recrutement"
@@ -5068,11 +5070,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "starbucks-7bdpoiss",
     "name": "Starbucks (7 Bd Poissonnière)",
     "slug": "starbucks",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Starbucks is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Coffee & Bakery company in Paris",
+    "description": "Starbucks is a verified provider of food service / coffee & bakery services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Coffee & Bakery",
     "area": "2nd arrondissement",
     "address": "7 Bd Poissonnière, 75002 Paris, France",
     "coordinates": [
@@ -5096,7 +5098,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Barista / store team",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Coffee & Bakery",
         "location": "2nd arr.",
         "type": "Part-time",
         "url": "https://www.starbucks.fr/recrutement"
@@ -5111,11 +5113,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "pret-a-manger-34ruedul",
     "name": "Pret A Manger (34 Rue du Louvre)",
     "slug": "pret-a-manger",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Pret A Manger is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Coffee & Bakery company in Paris",
+    "description": "Pret A Manger is a verified provider of food service / coffee & bakery services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Coffee & Bakery",
     "area": "1st arrondissement",
     "address": "34 Rue du Louvre, 75001 Paris, France",
     "coordinates": [
@@ -5139,7 +5141,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Team Member / Service",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Coffee & Bakery",
         "location": "1st arr.",
         "type": "Part-time",
         "url": "https://www.pret.co.uk/en-GB/pret-jobs"
@@ -5154,11 +5156,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "dominos-pizza-ruetolbi",
     "name": "Domino's Pizza (Rue Tolbiac)",
     "slug": "dominos-pizza",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Domino's Pizza is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Pizza Delivery company in Paris",
+    "description": "Domino's Pizza is a verified provider of food service / pizza delivery services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Pizza Delivery",
     "area": "Paris",
     "address": "Rue Tolbiac, Paris, France",
     "coordinates": [
@@ -5182,7 +5184,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Delivery / store team",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Pizza Delivery",
         "location": "Paris",
         "type": "Part-time",
         "url": "https://www.dominos.fr/recrutement"
@@ -5196,11 +5198,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "dominos-pizza-ruelebon",
     "name": "Domino's Pizza (Rue Lebon)",
     "slug": "dominos-pizza",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Domino's Pizza is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Pizza Delivery company in Paris",
+    "description": "Domino's Pizza is a verified provider of food service / pizza delivery services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Pizza Delivery",
     "area": "Paris",
     "address": "Rue Lebon, Paris, France",
     "coordinates": [
@@ -5224,7 +5226,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Delivery / store team",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Pizza Delivery",
         "location": "Paris",
         "type": "Part-time",
         "url": "https://www.dominos.fr/recrutement"
@@ -5238,11 +5240,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "dominos-pizza-ruelegen",
     "name": "Domino's Pizza (Rue Legendre)",
     "slug": "dominos-pizza",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Domino's Pizza is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Pizza Delivery company in Paris",
+    "description": "Domino's Pizza is a verified provider of food service / pizza delivery services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Pizza Delivery",
     "area": "Paris",
     "address": "Rue Legendre, Paris, France",
     "coordinates": [
@@ -5266,7 +5268,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Delivery / store team",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Pizza Delivery",
         "location": "Paris",
         "type": "Part-time",
         "url": "https://www.dominos.fr/recrutement"
@@ -5280,11 +5282,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "dominos-pizza-ruebosio",
     "name": "Domino's Pizza (Rue Bosio)",
     "slug": "dominos-pizza",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Domino's Pizza is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Pizza Delivery company in Paris",
+    "description": "Domino's Pizza is a verified provider of food service / pizza delivery services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Pizza Delivery",
     "area": "Paris",
     "address": "Rue Bosio, Paris, France",
     "coordinates": [
@@ -5308,7 +5310,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Delivery / store team",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Pizza Delivery",
         "location": "Paris",
         "type": "Part-time",
         "url": "https://www.dominos.fr/recrutement"
@@ -5322,11 +5324,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "dominos-pizza-avenuedu",
     "name": "Domino's Pizza (Avenue du Général Leclerc)",
     "slug": "dominos-pizza",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Domino's Pizza is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Pizza Delivery company in Paris",
+    "description": "Domino's Pizza is a verified provider of food service / pizza delivery services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Pizza Delivery",
     "area": "Paris",
     "address": "Avenue du Général Leclerc, Bourg-la-Reine, France",
     "coordinates": [
@@ -5350,7 +5352,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Delivery / store team",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Pizza Delivery",
         "location": "Paris",
         "type": "Part-time",
         "url": "https://www.dominos.fr/recrutement"
@@ -5364,11 +5366,11 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "id": "dominos-pizza-ruedepar",
     "name": "Domino's Pizza (Rue de Paris)",
     "slug": "dominos-pizza",
-    "tagline": "Leading E-Commerce & Retail company in Paris",
-    "description": "Domino's Pizza is a verified provider of e-commerce & retail services.",
+    "tagline": "Leading Food Service / Pizza Delivery company in Paris",
+    "description": "Domino's Pizza is a verified provider of food service / pizza delivery services.",
     "type": "Scale-up",
     "stage": "Profitable / Public",
-    "sector": "E-Commerce & Retail",
+    "sector": "Food Service / Pizza Delivery",
     "area": "Paris",
     "address": "Rue de Paris, Bobigny, France",
     "coordinates": [
@@ -5392,7 +5394,7 @@ export const PARIS_STARTUPS_DATA: Startup[] = [
     "jobs": [
       {
         "title": "Delivery / store team",
-        "department": "E-Commerce & Retail",
+        "department": "Food Service / Pizza Delivery",
         "location": "Paris",
         "type": "Part-time",
         "url": "https://www.dominos.fr/recrutement"
