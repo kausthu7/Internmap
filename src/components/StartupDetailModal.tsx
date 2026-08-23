@@ -447,10 +447,23 @@ export const StartupDetailModal: React.FC<StartupDetailModalProps> = ({
                     onReportNotHiring(startup.id);
                     setShowReportSuccess(true);
                     setTimeout(() => setShowReportSuccess(false), 3000);
-                    // Open native mailto prefilled to snhubinternational@gmail.com
-                    const subject = encodeURIComponent(`Not Hiring Report: ${startup.name}`);
-                    const body = encodeURIComponent(`Hello,\n\nI would like to report that "${startup.name}" is not currently hiring.\n\nPlease update the Internmap database accordingly.\n\nThanks!`);
-                    window.open(`mailto:snhubinternational@gmail.com?subject=${subject}&body=${body}`);
+                    
+                    // Silent background AJAX report to FormSubmit.co
+                    fetch("https://formsubmit.co/ajax/snhubinternational@gmail.com", {
+                      method: "POST",
+                      headers: {
+                        "Content-Type": "application/json",
+                        "Accept": "application/json"
+                      },
+                      body: JSON.stringify({
+                        _subject: `Not Hiring Report: ${startup.name}`,
+                        "Startup Name": startup.name,
+                        "Startup ID": startup.id,
+                        "Website": startup.websiteUrl,
+                        "Careers URL": startup.careersUrl,
+                        "Message": `A visitor has reported that "${startup.name}" is not hiring right now.`
+                      })
+                    }).catch((err) => console.error("Email report failed:", err));
                   }}
                   className="text-xs text-slate-400 hover:text-rose-600 font-semibold hover:underline inline-flex items-center gap-1 cursor-pointer transition-colors"
                 >
