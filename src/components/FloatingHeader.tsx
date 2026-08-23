@@ -308,6 +308,22 @@ export const FloatingHeader: React.FC<FloatingHeaderProps> = ({
         <div className="flex items-center gap-1.5 shrink-0">
           <div className="relative inline-block">
             <select
+              value={filters.selectedJobType}
+              onChange={(e) => onFilterChange('selectedJobType', e.target.value)}
+              className={`bg-white border rounded-full px-2.5 py-1 pr-5 text-[11px] font-medium appearance-none cursor-pointer outline-none transition-colors ${
+                filters.selectedJobType ? 'border-indigo-600 text-indigo-600 bg-indigo-50' : 'border-slate-200 text-slate-700 hover:border-slate-300'
+              }`}
+            >
+              <option value="">{t('sidebar.allJobs')}</option>
+              <option value="Internship">{t('sidebar.internship')}</option>
+              <option value="Full-time">{t('sidebar.fullTime')}</option>
+              <option value="Part-time">{t('sidebar.partTime')}</option>
+            </select>
+            <ChevronDown className="w-2.5 h-2.5 text-slate-400 absolute right-1.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+          </div>
+
+          <div className="relative inline-block">
+            <select
               value={filters.selectedType}
               onChange={(e) => onFilterChange('selectedType', e.target.value)}
               className={`bg-white border rounded-full px-2.5 py-1 pr-5 text-[11px] font-medium appearance-none cursor-pointer outline-none transition-colors ${
@@ -330,22 +346,6 @@ export const FloatingHeader: React.FC<FloatingHeaderProps> = ({
             >
               <option value="">{t('header.allAreas')}</option>
               {PARIS_AREAS.filter(a => a !== 'All areas').map((area) => <option key={area} value={area}>{area}</option>)}
-            </select>
-            <ChevronDown className="w-2.5 h-2.5 text-slate-400 absolute right-1.5 top-1/2 -translate-y-1/2 pointer-events-none" />
-          </div>
-
-          <div className="relative inline-block">
-            <select
-              value={filters.selectedJobType}
-              onChange={(e) => onFilterChange('selectedJobType', e.target.value)}
-              className={`bg-white border rounded-full px-2.5 py-1 pr-5 text-[11px] font-medium appearance-none cursor-pointer outline-none transition-colors ${
-                filters.selectedJobType ? 'border-indigo-600 text-indigo-600 bg-indigo-50' : 'border-slate-200 text-slate-700 hover:border-slate-300'
-              }`}
-            >
-              <option value="">{t('sidebar.allJobs')}</option>
-              <option value="Internship">{t('sidebar.internship')}</option>
-              <option value="Full-time">{t('sidebar.fullTime')}</option>
-              <option value="Part-time">{t('sidebar.partTime')}</option>
             </select>
             <ChevronDown className="w-2.5 h-2.5 text-slate-400 absolute right-1.5 top-1/2 -translate-y-1/2 pointer-events-none" />
           </div>
