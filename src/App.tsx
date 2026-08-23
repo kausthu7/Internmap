@@ -684,7 +684,7 @@ export default function App() {
                       ) : (
                         <a href="#/advertise" className="w-full h-full border-2 border-dashed border-orange-300/60 bg-orange-50/70 flex flex-col items-center justify-center text-center p-2 cursor-pointer hover:bg-orange-100/80 transition block decoration-none">
                           <span className="text-orange-500 font-bold text-xs mb-1">⚡ 24-hr flash slot</span>
-                          <span className="text-orange-600 text-[11px] font-semibold">30 €</span>
+                          <span className="text-orange-600 text-[11px] font-semibold">10 €</span>
                         </a>
                       )}
                     </div>
@@ -719,7 +719,7 @@ export default function App() {
                             ) : (
                               <a href="#/advertise" className="w-full h-full border-2 border-dashed border-orange-300 bg-orange-50/80 flex flex-col items-center justify-center text-center p-4 cursor-pointer hover:bg-orange-100 transition block decoration-none">
                                 <span className="text-orange-500 font-bold text-sm mb-1">⚡ 24-hr flash slot</span>
-                                <span className="text-orange-600 text-xs font-semibold">30 €</span>
+                                <span className="text-orange-600 text-xs font-semibold">10 €</span>
                               </a>
                             )}
                           </div>

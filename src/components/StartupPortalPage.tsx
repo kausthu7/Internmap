@@ -199,7 +199,7 @@ export const StartupPortalPage: React.FC<StartupPortalPageProps> = ({ onBackToMa
 
     const emailPayload = {
       _subject: `New Advertising Request: ${companyName.trim()}`,
-      selectedPlan: selectedPlan === 'plan1' ? 'Plan 1: Sponsor Tile (30 €)' : 'Plan 2: Map Pin Boost (50 €)',
+      selectedPlan: selectedPlan === 'plan1' ? 'Plan 1: Sponsor Tile (10 €)' : 'Plan 2: Map Pin Boost (30 €)',
       companyName: companyName.trim(),
       pocName: pocName.trim(),
       pocEmail: pocEmail.trim(),
@@ -783,7 +783,7 @@ export const StartupPortalPage: React.FC<StartupPortalPageProps> = ({ onBackToMa
                         <div>
                           <div className="flex justify-between items-start mb-2">
                             <span className="text-xs font-black text-orange-600 uppercase tracking-widest">Plan 1</span>
-                            <span className="text-lg font-black text-slate-800">30 €</span>
+                            <span className="text-lg font-black text-slate-800">10 €</span>
                           </div>
                           <h4 className="text-sm font-extrabold text-slate-900 mb-1">Sponsor Tile</h4>
                           <p className="text-[11px] text-slate-500 leading-relaxed">
@@ -805,7 +805,7 @@ export const StartupPortalPage: React.FC<StartupPortalPageProps> = ({ onBackToMa
                         <div>
                           <div className="flex justify-between items-start mb-2">
                             <span className="text-xs font-black text-orange-600 uppercase tracking-widest">Plan 2</span>
-                            <span className="text-lg font-black text-slate-800">50 €</span>
+                            <span className="text-lg font-black text-slate-800">30 €</span>
                           </div>
                           <h4 className="text-sm font-extrabold text-slate-900 mb-1">Map Pin Boost</h4>
                           <p className="text-[11px] text-slate-500 leading-relaxed">

@@ -80,7 +80,7 @@ export const AdvertisePage: React.FC<AdvertisePageProps> = ({ onBack }) => {
 
     const emailPayload = {
       _subject: `New Advertising Request: ${companyName.trim()}`,
-      selectedPlan: selectedPlan === 'plan1' ? 'Plan 1: Sponsor Tile (30 €)' : 'Plan 2: Map Pin Boost (50 €)',
+      selectedPlan: selectedPlan === 'plan1' ? 'Plan 1: Sponsor Tile (10 €)' : 'Plan 2: Map Pin Boost (30 €)',
       companyName: companyName.trim(),
       pocName: pocName.trim(),
       pocEmail: pocEmail.trim(),
@@ -292,7 +292,7 @@ export const AdvertisePage: React.FC<AdvertisePageProps> = ({ onBack }) => {
         {/* Section 2 */}
         <div className="mb-10">
           <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-5 border-b border-slate-100 pb-2">
-            2 · {selectedPlan === 'plan1' ? 'Pay 30 € via Revolut / IBAN' : 'Pay 50 € via Revolut / IBAN'}
+            2 · {selectedPlan === 'plan1' ? 'Pay 10 € via Revolut / IBAN' : 'Pay 30 € via Revolut / IBAN'}
           </h2>
           <div className="flex flex-col md:flex-row gap-6">
             {/* QR Code Card */}

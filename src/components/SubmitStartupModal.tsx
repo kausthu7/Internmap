@@ -168,7 +168,7 @@ export const SubmitStartupModal: React.FC<SubmitStartupModalProps> = ({
         headcount,
         careersUrl,
         hiringNow: hiringNow ? 'Yes' : 'No',
-        requestedBoost: isBoosted ? 'Yes (50 € Package)' : 'No',
+        requestedBoost: isBoosted ? 'Yes (30 € Package)' : 'No',
         foundersInput,
         tagsInput
       };
@@ -557,7 +557,7 @@ export const SubmitStartupModal: React.FC<SubmitStartupModalProps> = ({
                     />
                     <label htmlFor="boost-toggle-checkbox" className="text-xs font-bold text-orange-950 cursor-pointer flex items-center gap-1.5">
                       <span>Upgrade to Map Pin Boost ⚡</span>
-                      {!isAdminMode && <span className="bg-orange-100 text-orange-800 text-[9px] px-1.5 py-0.5 rounded font-bold">50 €</span>}
+                      {!isAdminMode && <span className="bg-orange-100 text-orange-800 text-[9px] px-1.5 py-0.5 rounded font-bold">30 €</span>}
                     </label>
                   </div>
                 </div>
