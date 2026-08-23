@@ -7,3 +7,6 @@ coverage/
 .env*
 !.env.example
 temp_excel_extract/
+
+.vercel
+.env*

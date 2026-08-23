@@ -821,16 +821,8 @@ export const StartupPortalPage: React.FC<StartupPortalPageProps> = ({ onBackToMa
                       <h3 className="text-xs font-bold text-slate-700 uppercase tracking-wider">Payment Instructions</h3>
                       
                       <div className="flex flex-col md:flex-row gap-5 items-center bg-white p-4 rounded-xl border border-slate-100 shadow-2xs">
-                        <div className="w-28 h-28 bg-slate-100 flex items-center justify-center shrink-0 border border-slate-200 rounded-lg relative overflow-hidden">
-                          {/* Custom visual mockup of Revolut QR */}
-                          <div className="absolute inset-2 border-2 border-slate-300 border-dashed flex flex-col items-center justify-center text-center p-1">
-                            <div className="w-10 h-10 border border-slate-400 flex flex-wrap p-0.5 gap-0.5 mb-1 bg-white">
-                              {[...Array(9)].map((_, i) => (
-                                <div key={i} className={`w-2.5 h-2.5 ${i % 3 === 0 || i === 8 ? 'bg-slate-800' : 'bg-slate-200'}`} />
-                              ))}
-                            </div>
-                            <span className="text-[7.5px] font-black text-slate-500 uppercase tracking-tight">Scan with Revolut</span>
-                          </div>
+                        <div className="w-24 h-24 bg-white flex items-center justify-center shrink-0 border border-slate-200 rounded-lg overflow-hidden">
+                          <img src="/revolut-qr.jpg" alt="Revolut QR Code" className="w-full h-full object-contain p-1" />
                         </div>
                         <div className="text-center md:text-left space-y-1">
                           <h4 className="text-xs font-black text-slate-800">Revolut Payment Link</h4>
@@ -842,13 +834,24 @@ export const StartupPortalPage: React.FC<StartupPortalPageProps> = ({ onBackToMa
 
                       <div className="space-y-2 text-[11px] text-slate-600 leading-relaxed">
                         <h4 className="text-xs font-black text-slate-800">SEPA Bank Transfer (IBAN)</h4>
-                        <div className="grid grid-cols-3 gap-y-1 border-t border-slate-200/50 pt-2">
+                        <div className="grid grid-cols-3 gap-y-1 border-t border-slate-200/50 pt-2 text-[11px]">
                           <span className="font-bold text-slate-500">Beneficiary:</span>
-                          <span className="col-span-2 font-mono text-slate-800">Kausthubh</span>
+                          <span className="col-span-2 font-mono text-slate-800 font-bold">Kausthub Rajan</span>
+                          
                           <span className="font-bold text-slate-500">IBAN:</span>
-                          <span className="col-span-2 font-mono text-slate-800 break-all select-all">FR76 3000 6000 0123 4567 8901 234</span>
+                          <span className="col-span-2 font-mono text-slate-800 break-all select-all font-bold">FR76 2823 3000 0184 2676 9367 421</span>
+                          
                           <span className="font-bold text-slate-500">BIC/SWIFT:</span>
-                          <span className="col-span-2 font-mono text-slate-800">AGRIFRPPPXXX</span>
+                          <span className="col-span-2 font-mono text-slate-800 font-bold">REVOFRP2</span>
+
+                          <span className="font-bold text-slate-500">Bank Name:</span>
+                          <span className="col-span-2 font-mono text-slate-800 leading-tight">
+                            Revolut Bank UAB<br />
+                            10 avenue Kléber, 75116, Paris, France
+                          </span>
+
+                          <span className="font-bold text-slate-500">Correspondent BIC:</span>
+                          <span className="col-span-2 font-mono text-slate-800">CHASDEFX</span>
                         </div>
                       </div>
                     </div>

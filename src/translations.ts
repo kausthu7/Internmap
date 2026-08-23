@@ -115,6 +115,9 @@ export const translations = {
     'detail.careersPortal': 'Careers Portal',
     'detail.visitWebsite': 'Visit Website',
     'detail.openJobs': 'Open Jobs',
+    'detail.reportNotHiring': 'Report as not hiring',
+    'detail.reportedSuccess': 'Report submitted successfully!',
+    'detail.alreadyReported': 'Report pending review',
     // Map Popup
     'popup.hiring': 'Hiring',
     'popup.employees': 'employees',
@@ -236,6 +239,9 @@ export const translations = {
     'detail.careersPortal': 'Portail carrières',
     'detail.visitWebsite': 'Visiter le site web',
     'detail.openJobs': 'Postes ouverts',
+    'detail.reportNotHiring': 'Signaler comme ne recrutant pas',
+    'detail.reportedSuccess': 'Signalement soumis avec succès !',
+    'detail.alreadyReported': 'Signalement en cours d\'examen',
     // Map Popup
     'popup.hiring': 'Recrute',
     'popup.employees': 'employés',

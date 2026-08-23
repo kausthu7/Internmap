@@ -1,0 +1,12 @@
+<svg width="32" height="36" viewBox="0 0 32 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="splitGradientFavicon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="50%" stopColor="#2E6F40" />
+      <stop offset="50%" stopColor="#68BA7F" />
+    </linearGradient>
+  </defs>
+  <ellipse cx="16" cy="32" rx="7" ry="1.8" stroke="url(#splitGradientFavicon)" strokeWidth="1.8" />
+  <path d="M 16 3 C 10 3 6 7 6 13 C 6 18.5 11 23.2 16 28.5 C 21 23.2 26 18.5 26 13 C 26 7 22 3 16 3 Z" stroke="url(#splitGradientFavicon)" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+  <path d="M 16 6 L 15 12 H 17 Z M 14.5 12 H 17.5 V 13.5 H 14.5 Z M 14 13.5 L 13.5 17.5 H 18.5 L 18 13.5 Z M 13 17.5 H 19 V 19 H 13 Z M 12.5 19 L 11.5 24 H 13.5 A 2.5 2.5 0 0 1 18.5 24 H 20.5 L 19.5 19 Z" fill="url(#splitGradientFavicon)" />
+  <circle cx="16" cy="24" r="1.2" fill="url(#splitGradientFavicon)" />
+</svg>

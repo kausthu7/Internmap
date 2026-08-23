@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { SubmitStartupModal } from './SubmitStartupModal';
 import { EditStartupModal } from './EditStartupModal';
-import { Startup } from '../types';
-import { Plus, Settings, Image as ImageIcon, MapPin, Trash2, Edit2, Globe, ExternalLink } from 'lucide-react';
+import { Startup, NotHiringReport } from '../types';
+import { Plus, Settings, Image as ImageIcon, MapPin, Trash2, Edit2, Globe, ExternalLink, Flag } from 'lucide-react';
 
 interface AdminDashboardProps {
   startups: Startup[];
@@ -11,7 +11,34 @@ interface AdminDashboardProps {
   onDeleteStartup: (id: string) => void;
   onToggleBoost: (id: string) => void;
   onEditStartup: (startup: Startup) => void;
+  reports: NotHiringReport[];
+  onResolveReport: (reportId: string) => void;
+  onDismissReport: (reportId: string) => void;
 }
+
+const getRemainingBoostTime = (boostedUntil?: string): string => {
+  if (!boostedUntil) return '';
+  const now = Date.now();
+  const until = new Date(boostedUntil).getTime();
+  const diffMs = until - now;
+  if (diffMs <= 0) return 'expired';
+  
+  const diffSecs = Math.floor(diffMs / 1000);
+  const diffMins = Math.floor(diffSecs / 60);
+  const diffHours = Math.floor(diffMins / 60);
+  const diffDays = Math.floor(diffHours / 24);
+  
+  const hoursLeft = diffHours % 24;
+  const minsLeft = diffMins % 60;
+  
+  if (diffDays > 0) {
+    return `${diffDays}d ${hoursLeft}h left`;
+  } else if (diffHours > 0) {
+    return `${diffHours}h ${minsLeft}m left`;
+  } else {
+    return `${diffMins}m left`;
+  }
+};
 
 export const AdminDashboard: React.FC<AdminDashboardProps> = ({ 
   startups, 
@@ -19,7 +46,10 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
   onAddStartup, 
   onDeleteStartup,
   onToggleBoost,
-  onEditStartup
+  onEditStartup,
+  reports,
+  onResolveReport,
+  onDismissReport
 }) => {
   const [isSubmitModalOpen, setIsSubmitModalOpen] = useState(false);
   const [editingStartup, setEditingStartup] = useState<Startup | null>(null);
@@ -174,16 +204,23 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                       </div>
                     </td>
                     <td className="px-4 py-3">
-                      <button
-                        onClick={() => onToggleBoost(startup.id)}
-                        className={`px-2 py-1 rounded text-[10px] font-bold transition-all cursor-pointer ${
-                          startup.isBoosted
-                            ? 'bg-orange-500 hover:bg-orange-600 text-white shadow-sm ring-1 ring-orange-400'
-                            : 'bg-slate-100 hover:bg-slate-200 text-slate-600'
-                        }`}
-                      >
-                        {startup.isBoosted ? 'Boosted ⚡' : 'Boost'}
-                      </button>
+                      <div className="flex flex-col items-start gap-1">
+                        <button
+                          onClick={() => onToggleBoost(startup.id)}
+                          className={`px-2 py-1 rounded text-[10px] font-bold transition-all cursor-pointer ${
+                            startup.isBoosted
+                              ? 'bg-orange-500 hover:bg-orange-600 text-white shadow-sm ring-1 ring-orange-400'
+                              : 'bg-slate-100 hover:bg-slate-200 text-slate-600'
+                          }`}
+                        >
+                          {startup.isBoosted ? 'Boosted ⚡' : 'Boost'}
+                        </button>
+                        {startup.isBoosted && startup.boostedUntil && (
+                          <span className="text-[10px] text-orange-600 font-semibold block mt-0.5 whitespace-nowrap">
+                            {getRemainingBoostTime(startup.boostedUntil)}
+                          </span>
+                        )}
+                      </div>
                     </td>
                     <td className="px-4 py-3 text-right">
                       <div className="flex items-center justify-end gap-2">
@@ -209,6 +246,85 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                   <tr>
                     <td colSpan={6} className="px-4 py-8 text-center text-slate-400">
                       No startups found.
+                    </td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* User Reports Section */}
+        <section className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+          <div className="mb-6 flex items-center justify-between">
+            <div>
+              <h2 className="text-lg font-bold flex items-center gap-2">
+                <Flag className="w-5 h-5 text-red-500" />
+                User Reports (Not Hiring)
+              </h2>
+              <p className="text-sm text-slate-500">
+                Manage reports from visitors identifying companies that are no longer hiring.
+              </p>
+            </div>
+            <span className="bg-red-100 text-red-700 text-xs font-semibold px-2.5 py-1 rounded-full">
+              {reports.filter((r) => r.status === 'pending').length} Pending
+            </span>
+          </div>
+
+          <div className="border border-slate-200 rounded-lg overflow-hidden max-h-[300px] overflow-y-auto">
+            <table className="w-full text-left text-sm text-slate-600">
+              <thead className="bg-slate-50 border-b border-slate-200 text-xs font-bold uppercase text-slate-700 sticky top-0 z-10">
+                <tr>
+                  <th className="px-4 py-3">Startup Name</th>
+                  <th className="px-4 py-3">Reported Date</th>
+                  <th className="px-4 py-3">Status</th>
+                  <th className="px-4 py-3 text-right">Actions</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-100">
+                {reports.map((report) => (
+                  <tr key={report.id} className="hover:bg-slate-50 transition-colors">
+                    <td className="px-4 py-3 font-semibold text-slate-900">{report.startupName}</td>
+                    <td className="px-4 py-3 text-xs">
+                      {new Date(report.timestamp).toLocaleString()}
+                    </td>
+                    <td className="px-4 py-3 text-xs">
+                      <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${
+                        report.status === 'pending'
+                          ? 'bg-amber-100 text-amber-800'
+                          : report.status === 'resolved'
+                          ? 'bg-emerald-100 text-emerald-800'
+                          : 'bg-slate-100 text-slate-600'
+                      }`}>
+                        {report.status}
+                      </span>
+                    </td>
+                    <td className="px-4 py-3 text-right">
+                      {report.status === 'pending' ? (
+                        <div className="flex items-center justify-end gap-2">
+                          <button
+                            onClick={() => onResolveReport(report.id)}
+                            className="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 rounded text-xs font-semibold cursor-pointer transition-colors"
+                          >
+                            Mark Not Hiring
+                          </button>
+                          <button
+                            onClick={() => onDismissReport(report.id)}
+                            className="border border-slate-200 hover:bg-slate-50 text-slate-600 px-3 py-1 rounded text-xs font-semibold cursor-pointer transition-colors"
+                          >
+                            Dismiss
+                          </button>
+                        </div>
+                      ) : (
+                        <span className="text-xs text-slate-400 italic">No actions needed</span>
+                      )}
+                    </td>
+                  </tr>
+                ))}
+                {reports.length === 0 && (
+                  <tr>
+                    <td colSpan={4} className="px-4 py-8 text-center text-slate-400">
+                      No user reports found.
                     </td>
                   </tr>
                 )}

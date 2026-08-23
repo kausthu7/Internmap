@@ -11,7 +11,8 @@ import {
   Bookmark,
   Share2,
   Check,
-  ArrowUpRight
+  ArrowUpRight,
+  Flag
 } from 'lucide-react';
 import { Startup } from '../types';
 import { getLogoFilename } from '../logoHelper';
@@ -23,6 +24,8 @@ interface StartupDetailModalProps {
   isBookmarked: boolean;
   onToggleBookmark: (startupId: string) => void;
   onFocusOnMap?: (startup: Startup) => void;
+  reportedPendingIds: string[];
+  onReportNotHiring: (startupId: string) => void;
 }
 
 export const StartupDetailModal: React.FC<StartupDetailModalProps> = ({
@@ -31,10 +34,13 @@ export const StartupDetailModal: React.FC<StartupDetailModalProps> = ({
   isBookmarked,
   onToggleBookmark,
   onFocusOnMap,
+  reportedPendingIds,
+  onReportNotHiring,
 }) => {
   const { t } = useLanguage();
   const [activeTab, setActiveTab] = useState<'overview' | 'jobs' | 'founders' | 'stack'>('overview');
   const [copiedLink, setCopiedLink] = useState(false);
+  const [showReportSuccess, setShowReportSuccess] = useState(false);
 
   if (!startup) return null;
 
@@ -352,6 +358,34 @@ export const StartupDetailModal: React.FC<StartupDetailModalProps> = ({
                 <div className="text-center py-8 text-slate-500">
                   <Briefcase className="w-8 h-8 text-slate-300 mx-auto mb-2" />
                   <p className="text-xs font-medium">{t('detail.vacancies')}</p>
+                </div>
+              )}
+
+              {startup.hiringNow && (
+                <div className="pt-4 border-t border-slate-100 flex flex-col items-end gap-2">
+                  {showReportSuccess ? (
+                    <div className="text-xs font-semibold text-emerald-600 flex items-center gap-1">
+                      <Check className="w-3.5 h-3.5 text-emerald-600 animate-bounce" />
+                      {t('detail.reportedSuccess')}
+                    </div>
+                  ) : reportedPendingIds.includes(startup.id) ? (
+                    <div className="text-xs font-medium text-slate-500 bg-slate-50 px-2.5 py-1 rounded flex items-center gap-1 border border-slate-200">
+                      <Flag className="w-3.5 h-3.5 text-slate-400 fill-slate-400" />
+                      {t('detail.alreadyReported')}
+                    </div>
+                  ) : (
+                    <button
+                      onClick={() => {
+                        onReportNotHiring(startup.id);
+                        setShowReportSuccess(true);
+                        setTimeout(() => setShowReportSuccess(false), 3000);
+                      }}
+                      className="text-xs text-slate-400 hover:text-rose-600 font-semibold hover:underline inline-flex items-center gap-1 cursor-pointer transition-colors"
+                    >
+                      <Flag className="w-3.5 h-3.5" />
+                      {t('detail.reportNotHiring')}
+                    </button>
+                  )}
                 </div>
               )}
             </div>

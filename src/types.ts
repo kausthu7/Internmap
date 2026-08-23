@@ -79,6 +79,7 @@ export interface Startup {
   isCommunitySubmitted?: boolean;
   dateAdded?: string;
   isBoosted?: boolean;
+  boostedUntil?: string;
 }
 
 export interface FilterState {
@@ -91,3 +92,12 @@ export interface FilterState {
   hiringOnly: boolean;
   minFunding?: number;
 }
+
+export interface NotHiringReport {
+  id: string;
+  startupId: string;
+  startupName: string;
+  timestamp: string;
+  status: 'pending' | 'resolved' | 'dismissed';
+}
+

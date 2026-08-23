@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { PARIS_STARTUPS_DATA } from './data/startups';
-import { FilterState, Startup } from './types';
+import { FilterState, Startup, NotHiringReport } from './types';
 import { FloatingHeader } from './components/FloatingHeader';
 import { MapComponent } from './components/MapComponent';
 import { StartupCard } from './components/StartupCard';
@@ -37,6 +37,8 @@ const LOCAL_STORAGE_BOOKMARKS = 'paris_startups_bookmarks_v1';
 const LOCAL_STORAGE_DELETED_STARTUPS = 'paris_startups_deleted_v1';
 const LOCAL_STORAGE_BOOSTED_STARTUPS = 'paris_startups_boosted_v1';
 const LOCAL_STORAGE_MODIFIED_STARTUPS = 'paris_startups_modified_v1';
+const LOCAL_STORAGE_REPORTS = 'paris_startups_reports_v1';
+const LOCAL_STORAGE_BOOSTED_STARTUPS_V2 = 'paris_startups_boosted_v2';
 
 export default function App() {
   const { t } = useLanguage();
@@ -57,10 +59,10 @@ export default function App() {
       const saved = localStorage.getItem(LOCAL_STORAGE_CUSTOM_STARTUPS);
       const savedDeleted = localStorage.getItem(LOCAL_STORAGE_DELETED_STARTUPS);
       const savedBoosted = localStorage.getItem(LOCAL_STORAGE_BOOSTED_STARTUPS);
+      const savedBoostedV2 = localStorage.getItem(LOCAL_STORAGE_BOOSTED_STARTUPS_V2);
       const savedModified = localStorage.getItem(LOCAL_STORAGE_MODIFIED_STARTUPS);
       
       const deletedIds: string[] = savedDeleted ? JSON.parse(savedDeleted) : [];
-      const boostedIds: string[] = savedBoosted ? JSON.parse(savedBoosted) : [];
       const modifiedList: Startup[] = savedModified ? JSON.parse(savedModified) : [];
       
       let baseList = PARIS_STARTUPS_DATA.map(s => {
@@ -84,12 +86,57 @@ export default function App() {
         combined = [...baseList];
       }
 
-      // Apply boosted status from localStorage
-      if (boostedIds.length > 0) {
-        combined = combined.map(s => 
-          boostedIds.includes(s.id) ? { ...s, isBoosted: true } : s
-        );
+      // Load boost map v2
+      const boostUntilMap: Record<string, string> = savedBoostedV2 ? JSON.parse(savedBoostedV2) : {};
+      const now = Date.now();
+
+      // Migration: load legacy V1 boostedIds if V2 is empty
+      if (!savedBoostedV2 && savedBoosted) {
+        const boostedIdsV1: string[] = JSON.parse(savedBoosted);
+        if (boostedIdsV1.length > 0) {
+          const sevenDaysFromNow = new Date(now + 7 * 24 * 60 * 60 * 1000).toISOString();
+          boostedIdsV1.forEach(id => {
+            boostUntilMap[id] = sevenDaysFromNow;
+          });
+          localStorage.setItem(LOCAL_STORAGE_BOOSTED_STARTUPS_V2, JSON.stringify(boostUntilMap));
+        }
       }
+
+      // Expire old boosts
+      let mapChanged = false;
+      const activeBoosts: Record<string, string> = {};
+      for (const id in boostUntilMap) {
+        const untilTime = new Date(boostUntilMap[id]).getTime();
+        if (untilTime > now) {
+          activeBoosts[id] = boostUntilMap[id];
+        } else {
+          mapChanged = true;
+        }
+      }
+
+      if (mapChanged) {
+        localStorage.setItem(LOCAL_STORAGE_BOOSTED_STARTUPS_V2, JSON.stringify(activeBoosts));
+        // Keep legacy v1 synced
+        localStorage.setItem(LOCAL_STORAGE_BOOSTED_STARTUPS, JSON.stringify(Object.keys(activeBoosts)));
+      }
+
+      // Apply active boosts to startups
+      combined = combined.map(s => {
+        if (activeBoosts[s.id]) {
+          return {
+            ...s,
+            isBoosted: true,
+            boostedUntil: activeBoosts[s.id]
+          };
+        } else {
+          return {
+            ...s,
+            isBoosted: false,
+            boostedUntil: undefined
+          };
+        }
+      });
+
       return combined;
     } catch (e) {
       console.error('Error loading custom startups', e);
@@ -137,6 +184,16 @@ export default function App() {
   // 8. Map Tile & Centering controls
   const [activeTile, setActiveTile] = useState<'positron' | 'dark_matter' | 'voyager'>('voyager');
   const [resetCenterTrigger, setResetCenterTrigger] = useState(0);
+
+  // 9. Reports State
+  const [reports, setReports] = useState<NotHiringReport[]>(() => {
+    try {
+      const saved = localStorage.getItem(LOCAL_STORAGE_REPORTS);
+      return saved ? JSON.parse(saved) : [];
+    } catch (e) {
+      return [];
+    }
+  });
 
   useEffect(() => {
     const handleHashChange = () => setCurrentPath(window.location.hash);
@@ -193,6 +250,14 @@ export default function App() {
           const filteredBoosted = boostedIds.filter(bid => bid !== id);
           localStorage.setItem(LOCAL_STORAGE_BOOSTED_STARTUPS, JSON.stringify(filteredBoosted));
         }
+
+        // Remove from boosted V2 storage as well
+        const savedBoostedV2 = localStorage.getItem(LOCAL_STORAGE_BOOSTED_STARTUPS_V2);
+        if (savedBoostedV2) {
+          const boostUntilMap: Record<string, string> = JSON.parse(savedBoostedV2);
+          delete boostUntilMap[id];
+          localStorage.setItem(LOCAL_STORAGE_BOOSTED_STARTUPS_V2, JSON.stringify(boostUntilMap));
+        }
       } catch (e) {
         console.error('Failed to persist deleted startup', e);
       }
@@ -203,12 +268,39 @@ export default function App() {
   // Handle Toggling Boost Status
   const handleToggleBoost = (id: string) => {
     setStartups((prev) => {
-      const updated = prev.map((s) => s.id === id ? { ...s, isBoosted: !s.isBoosted } : s);
+      const now = Date.now();
+      const sevenDaysFromNow = new Date(now + 7 * 24 * 60 * 60 * 1000).toISOString();
+
+      const updated = prev.map((s) => {
+        if (s.id === id) {
+          const newIsBoosted = !s.isBoosted;
+          return {
+            ...s,
+            isBoosted: newIsBoosted,
+            boostedUntil: newIsBoosted ? sevenDaysFromNow : undefined
+          };
+        }
+        return s;
+      });
+
       try {
         const customOnly = updated.filter((s) => s.isCommunitySubmitted);
         localStorage.setItem(LOCAL_STORAGE_CUSTOM_STARTUPS, JSON.stringify(customOnly));
 
-        const boostedIds = updated.filter((s) => s.isBoosted).map((s) => s.id);
+        // Update V2 boosted Map
+        const savedBoostedV2 = localStorage.getItem(LOCAL_STORAGE_BOOSTED_STARTUPS_V2);
+        const boostUntilMap: Record<string, string> = savedBoostedV2 ? JSON.parse(savedBoostedV2) : {};
+        
+        const target = updated.find((s) => s.id === id);
+        if (target && target.isBoosted && target.boostedUntil) {
+          boostUntilMap[id] = target.boostedUntil;
+        } else {
+          delete boostUntilMap[id];
+        }
+        localStorage.setItem(LOCAL_STORAGE_BOOSTED_STARTUPS_V2, JSON.stringify(boostUntilMap));
+
+        // Keep V1 storage synced
+        const boostedIds = Object.keys(boostUntilMap);
         localStorage.setItem(LOCAL_STORAGE_BOOSTED_STARTUPS, JSON.stringify(boostedIds));
       } catch (e) {
         console.error('Failed to persist custom startup boost status', e);
@@ -245,6 +337,76 @@ export default function App() {
       prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
     );
   };
+
+  // Report Startup as Not Hiring
+  const handleReportNotHiring = (startupId: string) => {
+    const startup = startups.find((s) => s.id === startupId);
+    if (!startup) return;
+
+    setReports((prev) => {
+      if (prev.some((r) => r.startupId === startupId && r.status === 'pending')) {
+        return prev;
+      }
+      const newReport: NotHiringReport = {
+        id: Math.random().toString(36).substring(2, 9),
+        startupId,
+        startupName: startup.name,
+        timestamp: new Date().toISOString(),
+        status: 'pending',
+      };
+      const updated = [...prev, newReport];
+      try {
+        localStorage.setItem(LOCAL_STORAGE_REPORTS, JSON.stringify(updated));
+      } catch (e) {
+        console.error('Failed to save reports', e);
+      }
+      return updated;
+    });
+  };
+
+  // Resolve Report (Mark Startup as Not Hiring)
+  const handleResolveReport = (reportId: string) => {
+    const report = reports.find((r) => r.id === reportId);
+    if (!report) return;
+
+    setReports((prev) => {
+      const updated = prev.map((r) => r.id === reportId ? { ...r, status: 'resolved' as const } : r);
+      try {
+        localStorage.setItem(LOCAL_STORAGE_REPORTS, JSON.stringify(updated));
+      } catch (e) {
+        console.error('Failed to save reports', e);
+      }
+      return updated;
+    });
+
+    const targetStartup = startups.find((s) => s.id === report.startupId);
+    if (targetStartup) {
+      handleEditStartup({
+        ...targetStartup,
+        hiringNow: false,
+        activeJobsCount: 0,
+        jobs: [],
+      });
+    }
+  };
+
+  // Dismiss Report
+  const handleDismissReport = (reportId: string) => {
+    setReports((prev) => {
+      const updated = prev.map((r) => r.id === reportId ? { ...r, status: 'dismissed' as const } : r);
+      try {
+        localStorage.setItem(LOCAL_STORAGE_REPORTS, JSON.stringify(updated));
+      } catch (e) {
+        console.error('Failed to save reports', e);
+      }
+      return updated;
+    });
+  };
+
+  // Memoized Pending Reported Startup IDs
+  const reportedPendingIds = useMemo(() => {
+    return reports.filter((r) => r.status === 'pending').map((r) => r.startupId);
+  }, [reports]);
 
   // Filter change helper
   const handleFilterChange = <K extends keyof FilterState>(key: K, value: FilterState[K]) => {
@@ -366,6 +528,9 @@ export default function App() {
         onDeleteStartup={handleDeleteStartup}
         onToggleBoost={handleToggleBoost}
         onEditStartup={handleEditStartup}
+        reports={reports}
+        onResolveReport={handleResolveReport}
+        onDismissReport={handleDismissReport}
       />
     );
   }
@@ -626,6 +791,8 @@ export default function App() {
           setSelectedStartup(s);
           setViewMode('map');
         }}
+        reportedPendingIds={reportedPendingIds}
+        onReportNotHiring={handleReportNotHiring}
       />
 
       {/* 5. Submit Startup Modal */}
